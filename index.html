@@ -3,18 +3,53 @@
 <head>
     <title>Page Title</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
-    <script src="base.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        function start() {
+            // 2. Initialize the JavaScript client library.
+            gapi.client.init({
+                'apiKey': 'AIzaSyA8kdKDRVUaZXEPq64RyQu4cLCTjMyIinA',
+                // clientId and scope are optional if auth is not required.
+                'clientId': '235978047404-i0kqa23r5d84erlt3o8v0ml5k3nfatp2.apps.googleusercontent.com',
+                'scope': 'https://www.googleapis.com/auth/youtube',
+            }).then(function() {
+                // 3. Initialize and make the API request.
+                return gapi.client.request({
+                    'path': 'https://www.googleapis.com/youtube/v3/captions?videoId=PRU2ShMzQRg&part=snippet',
+                })
+            }).then(function(response) {
+                console.log(response.result);
+            }, function(reason) {
+                console.log('Error: ' + reason.result.error.message);
+            });
+        };
+        // 1. Load the JavaScript client library.
+        gapi.load('client', start);
+    </script>
+
     <!--https://apis.google.com/js/api.js-->
-    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <!--<script src="https://apis.google.com/js/api.js?onload=init"></script>-->
+
+
 </head>
 <body>
 <div class="container">
-    <div class="col-md-12">
-        <h1>Youtube</h1>
+    <div class="pre-auth">voor het aanmelden</div>
+    <div class="post-auth">je bent aangemeld</div>
+    <h1 class="w100 text-center"><a href="index.html">YouTube</a></h1>
+    </header>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="#">
+                <p><input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
+                <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+            </form>
+            <div id="results"></div>
+        </div>
     </div>
 </div>
 
