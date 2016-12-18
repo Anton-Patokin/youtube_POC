@@ -19,16 +19,39 @@
             }).then(function() {
                 // 3. Initialize and make the API request.
                 return gapi.client.request({
-                    'path': 'https://www.googleapis.com/youtube/v3/captions?videoId=PRU2ShMzQRg&part=snippet',
+                    'path': 'https://www.googleapis.com/youtube/v3/captions?videoId=pCA34V65_nM&part=snippet',
                 })
+
             }).then(function(response) {
-                console.log(response.result);
+                //console.log(response.result);
+                on_success(response.result);
             }, function(reason) {
                 console.log('Error: ' + reason.result.error.message);
             });
         };
         // 1. Load the JavaScript client library.
         gapi.load('client', start);
+
+
+
+
+
+        function on_success(result){
+            console.log('get video caption info',result);
+            get_captions(result.items[0].id);
+        }
+
+
+        function get_captions(caption_id){
+            console.log(caption_id);
+            gapi.client.request({
+                'path': 'https://www.googleapis.com/youtube/v3/captions/'+caption_id,
+            }).then(function(response) {
+                console.log(response.result);
+            }, function(reason) {
+                console.log('Error: ', reason);
+            });
+        }
     </script>
 
     <!--https://apis.google.com/js/api.js-->

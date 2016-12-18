@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body ng-app="app" ng-controller="ctrl">
+<div class="container">
+    <img src="button.png" ng-click="login()" height="100" width="100">
+</div>
+
+</body>
+<script>
+    var app = angular.module('app', []);
+    app.controller('ctrl', function ($scope,$http,$window) {
+
+
+        var url;
+        var windowThatWasOpened;
+        $http.get("url").then(function(response) {
+            url = response.data;
+        });
+        $scope.login = function() {
+            windowThatWasOpened = $window.open(url, "Please sign in with Google", "width=500px,height:700px");
+        };
+        window.onmessage = function(e) {
+            windowThatWasOpened.close();
+            var urlWithCode = e.data;
+            var idx = urlWithCode.lastIndexOf("code=");
+            var code = urlWithCode.substring(idx + 5).replace("#","");
+            $http.get("tokens?code=" + code).then(function(response) {
+                console.log(response.data);
+            });
+        };
+    });
+</script>
+</html>
