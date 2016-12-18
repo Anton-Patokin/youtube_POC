@@ -3,11 +3,11 @@ var google = require("googleapis");
 
 
 var app = express();
-
+// var youtube = google.youtube('v3');
 app.use(express.static('static'));
 
 
-var server = app.listen(3000, function() {
+var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
 
@@ -30,14 +30,49 @@ var url = oauth2Client.generateAuthUrl({
     scope: scopes // If you only need one scope you can pass it as string
 });
 
-app.get("/url", function(req, res) {
+app.get("/url", function (req, res) {
     res.send(url);
 });
 
-app.get("/tokens", function(req, res) {
+var youtube = google.youtube('v3');
+app.get('/search', function (req, res) {
+    var search = req.query.code;
+    var request = youtube.search.list({key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4', part: 'snippet', q: search});
+    return res.json(request);
+});
+
+app.get('/captions', function (req, res) {
+    var videoId = req.query.code;
+    // var videoId ='pCA34V65_nM';
+    var get_captions_for_viseo = youtube.captions.list({
+        key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4',
+        part: 'snippet',
+        videoId: videoId
+    })
+    return res.json(get_captions_for_viseo);
+});
+
+
+app.get('/download_captions', function (req, res) {
+    var caption_id = req.query.code;
+    var user_login = req.query.access;
+    console.log('caprion_id--------', caption_id);
+
+    var get_captions_download = youtube.captions.download({key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4', id: caption_id});
+    return res.json(get_captions_download);
+});
+
+
+app.get('/api/:paramID1', function (req, res) {
+    var youtube = google.youtube('v3');
+    var request = youtube.search.list({key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4', part: 'snippet', q: 'cats'});
+    return res.json(request);
+});
+
+app.get("/tokens", function (req, res) {
     var code = req.query.code;
     console.log(code);
-    oauth2Client.getToken(code, function(err, tokens) {
+    oauth2Client.getToken(code, function (err, tokens) {
         if (err) {
             console.log(err);
             res.send(err);
@@ -46,8 +81,15 @@ app.get("/tokens", function(req, res) {
         console.log("allright!!!!");
         console.log(err);
         console.log(tokens);
-        oauth2Client.setCredentials(tokens);
-        // res.send(tokens); //geen idee wat dat is moet research doen
-        
+        // oauth2Client.setCredentials(tokens);
+        oauth2Client.setCredentials({
+            access_token: tokens.access_token,
+            refresh_token: tokens.refresh_token,
+        });
+        res.send(tokens);
+
+
+        // res.send(request);
+
     });
 });

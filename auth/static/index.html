@@ -11,32 +11,96 @@
 </head>
 <body ng-app="app" ng-controller="ctrl">
 <div class="container">
-    <img src="button.png" ng-click="login()" height="100" width="100">
+    <div ng-show="show_login">
+        <button class="btn btn-default" ng-click="login()">inlogen</button>
+    </div>
 </div>
-
+<div class="row">
+    <div class="col-md-6 col-md-offset-3" ng-hide="show_login">
+        <form ng-submit="submit(search)">
+            <p><input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control"
+                      ng-model="search"/>
+            </p>
+            <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+        </form>
+        <div id="results">
+            <h4>video id´s</h4>
+            <div ng-repeat="video in videos"><p ng-click="get_video_captions(video.id.videoId)">{{video.id.videoId}}</p>
+            </div>
+        </div>
+        <div>
+            <h4>Caption id for video</h4>
+            <div ng-repeat="captionsId in captionsIds">
+                <div class="row">
+                    <div class="col-md-4"><p>{{captionsId.snippet.videoId}}</p></div>
+                    <div class="col-md-4" ng-click="download_caption(captionsId.id)">{{captionsId.id}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script>
     var app = angular.module('app', []);
-    app.controller('ctrl', function ($scope,$http,$window) {
+    app.controller('ctrl', function ($scope, $http, $window) {
 
-
+        $scope.show_login = true;
+        $scope.user_token;
         var url;
         var windowThatWasOpened;
-        $http.get("url").then(function(response) {
+        $http.get("url").then(function (response) {
             url = response.data;
         });
-        $scope.login = function() {
+        $scope.login = function () {
             windowThatWasOpened = $window.open(url, "Please sign in with Google", "width=500px,height:700px");
         };
-        window.onmessage = function(e) {
+        window.onmessage = function (e) {
             windowThatWasOpened.close();
             var urlWithCode = e.data;
             var idx = urlWithCode.lastIndexOf("code=");
-            var code = urlWithCode.substring(idx + 5).replace("#","");
-            $http.get("tokens?code=" + code).then(function(response) {
-                console.log(response.data);
+            var code = urlWithCode.substring(idx + 5).replace("#", "");
+            $http.get("tokens?code=" + code).then(function (response) {
+                $scope.show_login = false;
+                console.log(response.data.access_token);
+                $scope.user_token =response.data.access_token;
             });
         };
+
+//get searched video
+        $scope.submit = function (search) {
+            $http.get('/search?code=' + search).then(function (response) {
+                $http.get(response.data.uri.href)
+                        .then(function (response) {
+                            console.log(response.data.items);
+                            $scope.videos = response.data.items;
+                        });
+
+            });
+        };
+
+        $scope.get_video_captions = function (id) {
+            $http.get('/captions?code=' + id).then(function (response) {
+                console.log("captions for video id", response);
+                $http.get(response.data.uri.href)
+                        .then(function (response) {
+                            console.log(response.data.items);
+                            $scope.captionsIds = response.data.items;
+                        });
+
+            });
+        }
+
+        $scope.download_caption = function (id) {
+            $http.get('/download_captions?code=' + id+"&access="+$scope.user_token).then(function (response) {
+                console.log("downloading caption for caption_id", response);
+//                $http.get(response.data.uri.href)
+//                        .then(function (response) {
+//                            console.log(response.data.items);
+//                            $scope.captionsIds = response.data.items;
+//                        });
+            });
+        }
+
     });
 </script>
 </html>
