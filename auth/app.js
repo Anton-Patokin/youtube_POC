@@ -2,6 +2,13 @@ var express = require("express");
 var google = require("googleapis");
 
 
+
+
+
+
+
+
+
 var app = express();
 // var youtube = google.youtube('v3');
 app.use(express.static('static'));
@@ -22,7 +29,8 @@ var oauth2Client = new OAuth2("20079120971-pbb0l788d0f5epakab0e2is67ct6h20k.apps
 // generate a url that asks permissions for Google+ and Google Calendar scopes
 var scopes = [
     'https://www.googleapis.com/auth/youtube.force-ssl',
-    'https://www.googleapis.com/auth/youtubepartner'
+    'https://www.googleapis.com/auth/youtubepartner',
+    'https://www.googleapis.com/youtube/v3/search'
 ];
 
 var url = oauth2Client.generateAuthUrl({
@@ -40,17 +48,47 @@ app.get('/search', function (req, res) {
     var request = youtube.search.list({key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4', part: 'snippet', q: search});
     return res.json(request);
 });
+app.get('/chekforcaptions', function (req, res) {
+    var videoId = req.query.code;
+    var get_captions_for_viseo = youtube.captions.list({
+        key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4',
+        part: 'snippet',
+        videoId: videoId
+    })
+    return res.json(get_captions_for_viseo);
+});
+
 
 app.get('/caption', function (req, res) {
+
     var videoId = req.query.code;
+    var youtubedl = require('youtube-dl');
+    var url = 'https://youtu.be/'+videoId;
+    console.log(url);
+
+    var options = {
+        // Write automatic subtitle file (youtube only)
+        auto: false,
+        // Downloads all the available subtitles.
+        all: false,
+        // Languages of subtitles to download, separated by commas.
+        lang: 'en',
+        // The directory to save the downloaded files in.
+        cwd: 'captions',
+    };
+    youtubedl.getSubs(url, options, function(err, files) {
+        if (err) throw err;
+
+        console.log('subtitle files downloaded:', files);
+        return res.json({caption: files});
+    });
+
     // var videoId ='pCA34V65_nM';
     // var get_captions_for_viseo = youtube.captions.list({
     //     key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4',
     //     part: 'snippet',
     //     videoId: videoId
     // })
-
-    return res.json({video:videoId});
 });
 
 
