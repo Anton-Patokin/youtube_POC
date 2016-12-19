@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a7b7156-ccba-479a-9742-15becc191ff9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/app.js" afterPath="$PROJECT_DIR$/auth/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/static/index.html" afterPath="$PROJECT_DIR$/auth/static/index.html" />
-    </list>
+    <list default="true" id="8a7b7156-ccba-479a-9742-15becc191ff9" name="Default" comment="" />
     <ignored path="youtube_POC.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -222,7 +218,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mailbox" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -280,12 +276,12 @@
       <workItem from="1482067578352" duration="8540000" />
       <workItem from="1482080425072" duration="15097000" />
       <workItem from="1482146429765" duration="27000" />
-      <workItem from="1482156715118" duration="3502000" />
+      <workItem from="1482156715118" duration="3509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40493000" />
+    <option name="totallyTimeSpent" value="40500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
