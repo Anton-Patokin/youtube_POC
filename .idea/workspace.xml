@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a7b7156-ccba-479a-9742-15becc191ff9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/app.js" afterPath="$PROJECT_DIR$/auth/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/static/index.html" afterPath="$PROJECT_DIR$/auth/static/index.html" />
     </list>
     <ignored path="youtube_POC.iws" />
@@ -48,18 +48,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client_secret_235978047404-i0kqa23r5d84erlt3o8v0ml5k3nfatp2.apps.googleusercontent.com.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client_secret_235978047404-i0kqa23r5d84erlt3o8v0ml5k3nfatp2.apps.googleusercontent.com.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="301">
+              <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -68,9 +58,12 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/auth/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="308">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding>
+                <marker date="1482185584292" expanded="true" signature="4061:4074" placeholder="..." />
+                <marker date="1482185584292" expanded="true" signature="4091:4131" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -238,6 +231,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="youtube_POC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="youtube_POC" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="captions" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -255,6 +270,11 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\youtube_POC\auth\static" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -308,18 +328,18 @@
       <workItem from="1482080425072" duration="15097000" />
       <workItem from="1482146429765" duration="27000" />
       <workItem from="1482156715118" duration="3509000" />
-      <workItem from="1482172024126" duration="5375000" />
+      <workItem from="1482172024126" duration="13437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45875000" />
+    <option name="totallyTimeSpent" value="53937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23229614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33154505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -384,7 +404,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2090">
           <caret line="95" column="79" selection-start-line="95" selection-start-column="79" selection-end-line="95" selection-end-column="79" />
-          <folding />
+          <folding>
+            <marker date="1482185584292" expanded="true" signature="4061:4074" placeholder="..." />
+            <marker date="1482185584292" expanded="true" signature="4091:4131" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -440,7 +463,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1408">
           <caret line="64" column="61" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="61" />
-          <folding />
+          <folding>
+            <marker date="1482185584292" expanded="true" signature="4061:4074" placeholder="..." />
+            <marker date="1482185584292" expanded="true" signature="4091:4131" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -496,7 +522,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1408">
           <caret line="64" column="61" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="61" />
-          <folding />
+          <folding>
+            <marker date="1482185584292" expanded="true" signature="4061:4074" placeholder="..." />
+            <marker date="1482185584292" expanded="true" signature="4091:4131" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -552,7 +581,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1482185584292" expanded="true" signature="4061:4074" placeholder="..." />
+            <marker date="1482185584292" expanded="true" signature="4091:4131" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -696,17 +728,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+        <state relative-caret-position="301">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../koning_kevin/website_koning_kevin/resources/views/projects/add_project.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="209" column="36" selection-start-line="209" selection-start-column="36" selection-end-line="212" selection-end-column="45" />
+          <folding>
+            <marker date="1481886230684" expanded="true" signature="3962:4639" placeholder="..." />
+            <marker date="1481886230684" expanded="true" signature="3974:4555" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="308">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <marker date="1482185584292" expanded="true" signature="4061:4074" placeholder="..." />
+            <marker date="1482185584292" expanded="true" signature="4091:4131" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

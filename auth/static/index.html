@@ -7,26 +7,68 @@
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.3.1.min.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
 </head>
 <body ng-app="app" ng-controller="ctrl">
+<div ">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="img/loading.gif" ng-show="loading_page">
+                            <h1 ng-hide="loading_page" ng-if="massage_error">{{massage_error}}</h1>
+                            <h1 ng-hide="loading_page" ng-if="massage_succes">{{massage_succes}}</h1>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div my-youtube code="videoToPlay"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 <div class="container">
     <!--<div ng-show="show_login">-->
     <!--<button class="btn btn-default" ng-click="login()">inlogen</button>-->
     <!--</div>-->
+
+
 </div>
 <div class="row">
-    <div class="col-md-6 col-md-offset-3" ng-hide="show_login">
+    <div class="col-md-6 col-md-offset-3">
         <form ng-submit="submit(search)">
             <p><input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control"
                       ng-model="search"/>
             </p>
             <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+
         </form>
+
+
         <div id="results">
             <h4>video id´s</h4>
             <div ng-repeat="video in videos">
-                <div class="row" ng-click="get_video_captions(video.id.videoId)">
+                <div class="row" ng-click="get_video_captions(video.id.videoId)" data-toggle="modal"
+                     data-target="#myModal">
                     <div class="col-md-5">
                         <img ng-src="{{video.snippet.thumbnails.medium.url}}">
                     </div>
@@ -49,12 +91,30 @@
         <!--</div>-->
         <!--</div>-->
         <!--</div>-->
+
     </div>
+    <!
 </div>
 </body>
 <script>
-    var app = angular.module('app', []);
-    app.controller('ctrl', function ($scope, $http, $window) {
+    var app = angular.module('app', ['ui.bootstrap']);
+    app.directive('myYoutube', function ($sce) {
+        return {
+            restrict: 'EA',
+            scope: {code: '='},
+            replace: true,
+            template: '<div style="height:400px;"><iframe style="overflow:hidden;height:315px;width:420px" src="{{url}}" frameborder="0" allowfullscreen></iframe></div>',
+            link: function (scope) {
+                console.log('here');
+                scope.$watch('code', function (newVal) {
+                    if (newVal) {
+                        scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + newVal);
+                    }
+                });
+            }
+        };
+    });
+    app.controller('ctrl', function ($uibModal, $scope, $http, $window) {
 
         $scope.show_login = false;
 //        $scope.user_token;
@@ -79,35 +139,63 @@
 //        };
 
 //get searched video
+
+        $scope.video_search_caption;
+        $scope.videos = [];
+
         $scope.submit = function (search) {
             $http.get('/search?code=' + search).then(function (response) {
                 $http.get(response.data.uri.href)
                         .then(function (response) {
-                            console.log(response.data.items);
+//                            console.log(response.data.items);
+                            $scope.video_search_caption = response.data.items;
                             for (var i = 0; i < response.data.items.length; i++) {
                                 $http.get('/chekforcaptions?code=' + response.data.items[i].id.videoId).then(function (response) {
-                                    console.log("captions for video id", response);
+//                                    console.log("captions for video id", response);
                                     $http.get(response.data.uri.href)
                                             .then(function (response) {
-                                                for (var j = 0; j < response.data.items.length; i++) {
-                                                    if(response.data.items[0].language){
-                                                        $scope.videos.push(response.data.items[i]);
+                                                if (response.data.items) {
+
+                                                    for (var j = 0; j < response.data.items.length; j++) {
+
+                                                        if (response.data.items[j].snippet.language == 'en') {
+                                                            for (var b = 0; b < $scope.video_search_caption.length; b++) {
+                                                                if ($scope.video_search_caption[b].id.videoId == response.data.items[j].snippet.videoId) {
+                                                                    console.log($scope.video_search_caption[b].id.videoId);
+                                                                    $scope.videos.push($scope.video_search_caption[b]);
+                                                                }
+                                                            }
+//                                                        $scope.videos.push($scope.video_search_caption);
+//                                                            console.log('deze heeft engelse ondetitles');
+                                                        }
                                                     }
                                                 }
-                                                console.log(response.data.items);
-//                                                $scope.captionsIds = response.data.items;
                                             });
-
                                 });
                             }
-//                            $scope.videos = response.data.items;
+//
                         });
-
+//                $scope.videos = response.data.items;
             });
         };
 
+
+        $scope.loading_page = false;
+        $scope.massage_error;
+        $scope.massage_succes;
+        $scope.videoToPlay;
         $scope.get_video_captions = function (id) {
+            $scope.loading_page = true;
             $http.get('/caption?code=' + id).then(function (response) {
+                $scope.loading_page = false;
+                if (response.data.caption.length) {
+                    $scope.videoToPlay = id;
+
+
+//                    $scope.massage_succes = "captions find->gaa verder met zoeken";
+                } else {
+                    $scope.massage_error = "Er is geen mogelijkheid om hier te zoeken";
+                }
                 console.log("captions for video id", response);
 //                $http.get(response.data.uri.href)
 //                        .then(function (response) {
@@ -131,5 +219,6 @@
 //        }
 
     });
+
 </script>
 </html>
