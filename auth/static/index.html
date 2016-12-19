@@ -62,7 +62,7 @@
             $http.get("tokens?code=" + code).then(function (response) {
                 $scope.show_login = false;
                 console.log(response.data.access_token);
-                $scope.user_token =response.data.access_token;
+                $scope.user_token =response.data;
             });
         };
 
@@ -92,7 +92,8 @@
 
         $scope.download_caption = function (id) {
             $http.get('/download_captions?code=' + id+"&access="+$scope.user_token).then(function (response) {
-                console.log("downloading caption for caption_id", response);
+                console.log('send acceess', $scope.user_token);
+                console.log("downloading caption for caption_id", response.data);
 //                $http.get(response.data.uri.href)
 //                        .then(function (response) {
 //                            console.log(response.data.items);

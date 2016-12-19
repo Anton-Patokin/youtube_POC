@@ -56,9 +56,9 @@ app.get('/captions', function (req, res) {
 app.get('/download_captions', function (req, res) {
     var caption_id = req.query.code;
     var user_login = req.query.access;
-    console.log('caprion_id--------', caption_id);
-
-    var get_captions_download = youtube.captions.download({key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4', id: caption_id});
+    console.log('caprion_id--------', user_login);
+    // google.options({ proxy: 'https://www.googleapis.com/youtube/v3/captions', auth: user_login });
+    var get_captions_download = youtube.captions.download({key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4',auth:user_login, id: caption_id});
     return res.json(get_captions_download);
 });
 
@@ -87,6 +87,7 @@ app.get("/tokens", function (req, res) {
             refresh_token: tokens.refresh_token,
         });
         res.send(tokens);
+
 
 
         // res.send(request);

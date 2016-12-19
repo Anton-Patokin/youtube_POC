@@ -1,0 +1,6 @@
+autorized redirect ->http://localhost:3000/authcallback
+Hier is uw client-ID->20079120971-pbb0l788d0f5epakab0e2is67ct6h20k.apps.googleusercontent.com
+Hier is uw clientgeheim->iNumbD_eX8OmXFjR6F0_FChp
+
+
+https://www.googleapis.com/youtube/v3/captions/pCA34V65_nM?access_token=ya29.CjC4A4L77jn7LIo0m_2_L01uLvfzFFVsqHBqbWrSC-2t3UOX5PD4I84TJxJmq5kOuSg
