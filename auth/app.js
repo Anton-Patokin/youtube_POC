@@ -62,6 +62,7 @@ app.get('/chekforcaptions', function (req, res) {
 app.get('/caption', function (req, res) {
 
     var videoId = req.query.code;
+
     var youtubedl = require('youtube-dl');
     var url = 'https://youtu.be/'+videoId;
     console.log(url);
@@ -74,12 +75,15 @@ app.get('/caption', function (req, res) {
         // Languages of subtitles to download, separated by commas.
         lang: 'en',
         // The directory to save the downloaded files in.
-        cwd: 'captions',
+        cwd: 'static/sub',
     };
     youtubedl.getSubs(url, options, function(err, files) {
         if (err) throw err;
 
         console.log('subtitle files downloaded:', files);
+
+        
+
         return res.json({caption: files});
     });
 
@@ -100,6 +104,20 @@ app.get('/caption', function (req, res) {
 //     var get_captions_download = youtube.captions.download({key: 'AIzaSyB-vZgi5IsycnA1_P43fyyl1NVz70SCEn4',auth:user_login, id: caption_id});
 //     return res.json(get_captions_download);
 // });
+
+
+app.get('/read_file', function (req, res) {
+    var url ='static'+ req.query.code;
+    fs = require('fs')
+    fs.readFile(url, 'utf8', function (err,data) {
+        if (err) {
+            return console.log(err);
+        }
+        return res.json({data:data});
+        console.log(data);
+    });
+    // return res.json({url:url});
+});
 
 
 app.get('/api/:paramID1', function (req, res) {

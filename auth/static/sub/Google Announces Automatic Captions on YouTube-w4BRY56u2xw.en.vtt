@@ -1,0 +1,2445 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.760 --> 00:00:02.010
+Google Event
+November 19, 2009
+
+00:00:01.900 --> 00:00:02.150
+Washington, D.C.
+
+00:00:01.960 --> 00:00:06.319
+&gt;&gt;Jonas Klink: All right.
+Good morning, everyone.
+
+00:00:06.319 --> 00:00:12.070
+My name is Jonas Klink.
+And I'm the product manager for the accessibility
+
+00:00:12.070 --> 00:00:16.510
+team here at Google.
+And we're very, very excited to have you guys
+
+00:00:16.510 --> 00:00:20.170
+here today.
+I want to extend a really, really warm welcome
+
+00:00:20.170 --> 00:00:24.670
+and thank you all for coming here.
+I know a lot of you are local.
+
+00:00:24.670 --> 00:00:28.460
+But it's still early in the morning.
+And we're thrilled to have you here.
+
+00:00:28.460 --> 00:00:32.239
+I think we're going to have a great event
+today.
+
+00:00:32.239 --> 00:00:37.420
+And I look forward to showing you the demo
+that we have going today.
+
+00:00:37.420 --> 00:00:43.659
+We have an agenda here behind me.
+After I do the brief introduction that I'm
+
+00:00:43.659 --> 00:00:47.809
+blocking, I'm going to hand it over to Vint
+Cerf.
+
+00:00:47.809 --> 00:00:52.100
+We're then going to have Ken and Naomi do
+some demos.
+
+00:00:52.100 --> 00:00:58.209
+Vint will come back to provide a wrap-up.
+And then we'll do some Q&amp;A towards the end.
+
+00:00:58.209 --> 00:01:03.249
+The bulk of us, the majority, will be available
+afterwards to give some additional demos,
+
+00:01:03.249 --> 00:01:06.150
+answer more questions, anything you haven't
+gotten to.
+
+00:01:06.150 --> 00:01:09.460
+So we're really thrilled to have Vint Cerf
+with us.
+
+00:01:09.460 --> 00:01:14.120
+His title here at Google is vice president
+and chief Internet evangelist.
+
+00:01:14.120 --> 00:01:17.340
+And -- but as many of you know, he's a lot
+more than that.
+
+00:01:17.340 --> 00:01:23.600
+He's widely known as the father of the Internet,
+as one of the codesigners of the TCP/IP protocol
+
+00:01:23.600 --> 00:01:30.600
+and the basic architecture of the Internet.
+He, to us, which might be widely known, he's
+
+00:01:31.810 --> 00:01:38.600
+really, really critical as an unwavering supporter
+for an accessible Internet, and especially
+
+00:01:38.600 --> 00:01:44.100
+for those who have special access needs.
+So without further ado, we're really thrilled
+
+00:01:44.100 --> 00:01:49.280
+to have him here.
+And I give you Vint Cerf.
+
+00:01:49.280 --> 00:01:52.840
+[ Applause ]
+&gt;&gt;Vint Cerf: Thank you, all, very, very much
+
+00:01:52.840 --> 00:01:57.680
+for coming.
+And welcome to Google's D.C. office.
+
+00:01:57.680 --> 00:02:02.880
+It's these kinds of events that have made
+us so happy to have this facility here.
+
+00:02:02.880 --> 00:02:08.769
+And I hope during the course of 2010, we will
+see you back here for other kinds of announcements
+
+00:02:08.769 --> 00:02:14.980
+related to our work in accessibility.
+Let me start out by -- I'm standing in front
+
+00:02:14.980 --> 00:02:18.829
+of these darned slides.
+How can we do this so I'm not in the way,
+
+00:02:18.829 --> 00:02:21.499
+as I fall off the side?
+Okay.
+
+00:02:21.499 --> 00:02:24.939
+Can I get the first slide, please.
+There we are.
+
+00:02:24.939 --> 00:02:31.189
+Everyone should know by this time that Google's
+motto is to organize the world's information
+
+00:02:31.189 --> 00:02:37.499
+and make it accessible and useful.
+And accessible is a really important word
+
+00:02:37.499 --> 00:02:40.019
+in the context of what we're going to talk
+about today.
+
+00:02:40.019 --> 00:02:47.019
+Accessibility comes in a wide range of features.
+There are issues for people who are deaf or
+
+00:02:48.499 --> 00:02:55.499
+hearing-impaired, or people who have visual
+impairments, who have low vision or no vision,
+
+00:02:55.499 --> 00:02:59.189
+people who have motor problems, and things
+like that.
+
+00:02:59.189 --> 00:03:04.680
+Google believes that the world's information
+should be accessible to everyone.
+
+00:03:04.680 --> 00:03:09.639
+And our interest is in finding ways to achieve
+that objective.
+
+00:03:09.639 --> 00:03:14.760
+We're far from solving the problem completely.
+But today's discussion and announcements will
+
+00:03:14.760 --> 00:03:19.989
+show you what I consider to be an important
+step in that direction.
+
+00:03:19.989 --> 00:03:22.599
+I'm going to cheat and look at my notes.
+Hold on.
+
+00:03:22.599 --> 00:03:29.599
+And I have to use my damned glasses to do
+it.
+
+00:03:29.829 --> 00:03:33.279
+I hate to admit that I have to wear these
+things.
+
+00:03:33.279 --> 00:03:37.259
+Inside of every 66-year-old is a 16-year-old
+wondering what happened.
+
+00:03:37.259 --> 00:03:41.950
+[ Laughter ]
+&gt;&gt;Vint Cerf: So I want to tell you, first
+
+00:03:41.950 --> 00:03:46.609
+of all, why accessibility's personally important
+to me.
+
+00:03:46.609 --> 00:03:50.459
+Sigrid, who is in the audience over there
+ -- wave your hand, Sigrid -- and I are both
+
+00:03:50.459 --> 00:03:54.489
+hearing-impaired.
+Sigrid was totally deaf for 50 years.
+
+00:03:54.489 --> 00:03:58.469
+She now has two cochlear implants.
+And they work wonderfully well.
+
+00:03:58.469 --> 00:04:02.129
+They work so well, we had to buy a bigger
+house, because she wanted bigger parties,
+
+00:04:02.129 --> 00:04:07.029
+because she could hear.
+So this is a technology which is spectacular.
+
+00:04:07.029 --> 00:04:09.680
+I've been wearing hearing aids since I was
+13.
+
+00:04:09.680 --> 00:04:12.099
+You can do the math.
+That's 53 years.
+
+00:04:12.099 --> 00:04:18.250
+So both of us care a great deal about how
+technology can help people with various impairments
+
+00:04:18.250 --> 00:04:22.160
+get access to information and be connected
+with the rest of the world.
+
+00:04:22.160 --> 00:04:27.810
+So quite apart from my job at Google, I have
+great personal interest in what we're talking
+
+00:04:27.810 --> 00:04:34.810
+about today.
+You know, YouTube is another part of the Google
+
+00:04:34.900 --> 00:04:37.720
+family.
+And you saw the signs, I hope, that said Google
+
+00:04:37.720 --> 00:04:43.920
+and YouTube are hosting this meeting.
+YouTube uncovered an extraordinary desire
+
+00:04:43.920 --> 00:04:50.570
+by the world's population to express itself
+using the video medium.
+
+00:04:50.570 --> 00:04:55.630
+And one of the big challenges of the video
+medium is whether it can be made accessible
+
+00:04:55.630 --> 00:04:59.480
+to everyone.
+It's a little hard to make video accessible
+
+00:04:59.480 --> 00:05:03.270
+to people who are blind.
+You need to have some kind of descriptive
+
+00:05:03.270 --> 00:05:08.140
+ability there.
+But for people who are deaf, that's another
+
+00:05:08.140 --> 00:05:13.540
+important area of concern, because they may
+not be able to hear people speaking.
+
+00:05:13.540 --> 00:05:19.890
+So video has turned out to be a stunningly
+important new medium for personal expression.
+
+00:05:19.890 --> 00:05:26.890
+You may not know the statistics, but there
+are 23 hours of video uploaded into YouTube
+
+00:05:26.970 --> 00:05:31.660
+every minute.
+23 hours of video per minute.
+
+00:05:31.660 --> 00:05:36.730
+Now, I have no idea how many hours of video
+are actually being watched, but I think the
+
+00:05:36.730 --> 00:05:43.730
+answer is bigger than that, although, for
+some videos, it may be like blogs, the average
+
+00:05:43.910 --> 00:05:50.910
+number of readers of a blog is probably 1.1,
+the person that wrote the blog and his dog.
+
+00:05:51.070 --> 00:05:57.230
+But these videos are often extremely popular.
+And if you haven't noticed, they have become
+
+00:05:57.230 --> 00:06:04.230
+an important medium of political expression.
+You saw this very evidently in the post-Iran
+
+00:06:05.390 --> 00:06:11.220
+elections, where many people used video and
+YouTube, in particular, to tell the rest of
+
+00:06:11.220 --> 00:06:18.220
+the world what was going on in that country.
+Well, we started our life at Google as a company
+
+00:06:19.010 --> 00:06:23.850
+that was indexing the Internet.
+We crawled through all the billions of pages
+
+00:06:23.850 --> 00:06:29.780
+on the net and we try to index them and then
+help people find the information that they're
+
+00:06:29.780 --> 00:06:35.090
+interested in.
+We'd like to extend that ability to find information
+
+00:06:35.090 --> 00:06:40.600
+to other media besides text.
+And so part of what we are about at Google
+
+00:06:40.600 --> 00:06:46.170
+is finding other ways of indexing content
+that may not necessarily be purely textual
+
+00:06:46.170 --> 00:06:50.510
+in nature.
+We move very, very quickly when it comes to
+
+00:06:50.510 --> 00:06:53.780
+new ideas.
+And we usually get them out there early.
+
+00:06:53.780 --> 00:06:57.350
+So beta testing is a very common thing for
+us.
+
+00:06:57.350 --> 00:07:02.240
+We put new products out there and find out
+what people do with them.
+
+00:07:02.240 --> 00:07:08.460
+An example of this is Google Wave, where we
+put that out very, very early in its development.
+
+00:07:08.460 --> 00:07:14.490
+And we're discovering very interesting things
+about how people use this combined communication
+
+00:07:14.490 --> 00:07:21.490
+tool, which incorporates blogging, instant
+messaging, e-mail, and many other forms of
+
+00:07:21.660 --> 00:07:25.670
+interaction.
+We're very interested in picking up other
+
+00:07:25.670 --> 00:07:30.390
+kinds of content than text.
+So you see this with Google Earth.
+
+00:07:30.390 --> 00:07:35.110
+You see it with Google Maps.
+And you see it with attempts to allow people
+
+00:07:35.110 --> 00:07:41.680
+to express information or display information
+that's geographically indexed by using our
+
+00:07:41.680 --> 00:07:48.680
+Google Earth and Google Maps facilities.
+We're looking for all kinds of ways of improving
+
+00:07:48.740 --> 00:07:54.000
+people's ability to find information.
+So some of you may be using the Google Toolbar,
+
+00:07:54.000 --> 00:08:01.000
+which we put -- or make available so that
+you can easily invoke a Google search.
+
+00:08:01.270 --> 00:08:08.270
+We're also very interested in internationalization.
+We've recently announced that we are capable
+
+00:08:08.300 --> 00:08:13.330
+of searching and translating 51 different
+languages.
+
+00:08:13.330 --> 00:08:18.030
+Now, there are some linguists in the crowd.
+I'm going to pick on my good friend Marc Okrand,
+
+00:08:18.030 --> 00:08:22.389
+who is a wonderful linguist at the National
+Captioning Institute.
+
+00:08:22.389 --> 00:08:27.680
+I know you have heard this, but I have to
+tell everybody, Marc is the inventor of the
+
+00:08:27.680 --> 00:08:32.560
+Klingon language.
+He's a linguist.
+
+00:08:32.560 --> 00:08:37.719
+And I'm sure he can appreciate the translating
+51 languages into 51 other languages, which
+
+00:08:37.719 --> 00:08:43.360
+is a nontrivial exercise.
+I also have to admit that we don't do equally
+
+00:08:43.360 --> 00:08:49.870
+well with all language pairs.
+I tried Chinese to Danish while I was in Copenhagen
+
+00:08:49.870 --> 00:08:52.810
+earlier this week.
+And since I don't speak either language, I
+
+00:08:52.810 --> 00:08:56.840
+don't know how well or poorly I did.
+But I noticed there were some chuck unless
+
+00:08:56.840 --> 00:09:02.700
+the Danish-speaking audience.
+But the point here is that we recognize accessibility
+
+00:09:02.700 --> 00:09:09.700
+as being another -- accessibility by way of
+language as being another important kind of
+
+00:09:09.800 --> 00:09:10.370
+accessibility.
+So I want to get the first slide up -- or
+
+00:09:10.370 --> 00:09:10.620
+next slide up, if I could.
+It's up there now.
+
+00:09:10.370 --> 00:09:13.430
+Okay.
+So what we're seeing here are some statistics
+
+00:09:13.430 --> 00:09:18.890
+basically, relative statistics of the number
+of people who speak various languages who
+
+00:09:18.890 --> 00:09:24.080
+are on the Internet.
+But you'll notice that the blue-colored bars
+
+00:09:24.080 --> 00:09:30.420
+illustrate people who have accessibility challenges.
+So there are more people with problems of
+
+00:09:30.420 --> 00:09:35.640
+color vision than there are Japanese or Spanish
+or German or French or of the other language
+
+00:09:35.640 --> 00:09:40.200
+speakers.
+Or people with poor vision exceed and represent
+
+00:09:40.200 --> 00:09:45.550
+a significant part of the Internet user population,
+or people with poor dexterity, or people who
+
+00:09:45.550 --> 00:09:51.360
+are deaf or hard of hearing and blind.
+So what we're saying here with these data
+
+00:09:51.360 --> 00:09:57.270
+is that there are a significant number of
+people in the Internet population who will
+
+00:09:57.270 --> 00:10:03.270
+benefit from improvements in accessibility.
+And we recognize this on a global scale.
+
+00:10:03.270 --> 00:10:09.930
+We try to serve users, all 1.7 billion of
+them who are online on the Internet today.
+
+00:10:09.930 --> 00:10:16.930
+And we would like to improve the ability of
+our users who have disabilities to get access
+
+00:10:17.740 --> 00:10:24.740
+to the information that we can provide.
+So let me just give you a couple of examples
+
+00:10:25.740 --> 00:10:30.010
+of the things that we do.
+In Google Applications or Google Apps, we've
+
+00:10:30.010 --> 00:10:37.010
+been focusing on keyboard access and the use
+assistive technologies like screen-readers
+
+00:10:37.880 --> 00:10:43.710
+to make the information available more accessible
+to people who can't see.
+
+00:10:43.710 --> 00:10:47.760
+We've released android operating system for
+mobiles.
+
+00:10:47.760 --> 00:10:51.610
+And our intent was to keep that as open as
+possible.
+
+00:10:51.610 --> 00:10:56.770
+It's an open source operating system.
+People can add functionality to it.
+
+00:10:56.770 --> 00:11:02.400
+And one of the things we would like to facilitate
+is the addition of assistive methods to make
+
+00:11:02.400 --> 00:11:08.890
+the operating system more useful in a mobile
+context for people who need help.
+
+00:11:08.890 --> 00:11:15.220
+We also released a browser called Chrome.
+And in addition to its security properties,
+
+00:11:15.220 --> 00:11:21.620
+which we believe are superior, it is also
+an open platform, one in which assistive mechanisms
+
+00:11:21.620 --> 00:11:28.000
+can be incorporated.
+And, finally, YouTube itself, in 2006, added
+
+00:11:28.000 --> 00:11:35.000
+the ability to put captions up on the YouTube
+videos if the supplier of that video had captioning
+
+00:11:37.810 --> 00:11:41.560
+transcripts available and could insert them
+into the video.
+
+00:11:41.560 --> 00:11:47.930
+So we're very interested in helping people
+with that kind of information to make it easily
+
+00:11:47.930 --> 00:11:53.060
+accessible to the rest of the world.
+So I'm going to stop here and just remind
+
+00:11:53.060 --> 00:12:00.060
+you again that Google is fully prepared to
+pursue accessibility features in all of our
+
+00:12:00.960 --> 00:12:07.220
+products and services, and we're here to tell
+you about some specific ones today.
+
+00:12:07.220 --> 00:12:11.700
+And to do that, I want to introduce my good
+friend Ken Harrenstien.
+
+00:12:11.700 --> 00:12:14.870
+Ken and I have known each other for probably
+over 30 years.
+
+00:12:14.870 --> 00:12:18.460
+I think we were two or three years old at
+the time when we met.
+
+00:12:18.460 --> 00:12:24.089
+Ken was at SRI International on the West Coast.
+He and I worked on something called Deaf Net,
+
+00:12:24.089 --> 00:12:31.089
+which was an extremely early attempt to bring
+terminal access to the Internet to people
+
+00:12:31.510 --> 00:12:37.670
+who were using TTYs and things of that kind.
+I would say we had mixed results with that
+
+00:12:37.670 --> 00:12:42.330
+experiment.
+But we learned a lot from how much value there
+
+00:12:42.330 --> 00:12:46.220
+came from having access to the Internet through
+these tools.
+
+00:12:46.220 --> 00:12:53.220
+But in the meantime, Ken has joined Google.
+And of all the people that I know at Google,
+
+00:12:57.180 --> 00:13:02.730
+Ken has been the strongest proponent and one
+of the strongest technical contributors to
+
+00:13:02.730 --> 00:13:07.740
+our accessibility initiatives.
+He's very, very vocal and passionate on the
+
+00:13:07.740 --> 00:13:10.970
+subject.
+And he's going to show you what he and his
+
+00:13:10.970 --> 00:13:16.420
+colleagues have been able to do in this area.
+So, Ken, thank you so much for coming here
+
+00:13:16.420 --> 00:13:23.400
+to the East Coast.
+Let me turn the microphone over to you.
+
+00:13:23.400 --> 00:13:30.400
+[ Applause ]
+&gt;&gt;Ken Harrenstien: Thank you, Vint.
+
+00:13:31.070 --> 00:13:36.960
+Hi, everyone.
+My name is Ken Harrenstien.
+
+00:13:36.960 --> 00:13:40.640
+As you can see, I'm a software engineer, and
+I work for Google.
+
+00:13:40.640 --> 00:13:47.640
+It's always such a great honor to share the
+stage here with Vint.
+
+00:13:49.959 --> 00:13:56.800
+But for me personally, it's even a bigger
+honor to have all of you here, because I know
+
+00:13:56.800 --> 00:14:03.800
+for all of us, we've worked many, many years
+diligently pursuing the same goal.
+
+00:14:04.190 --> 00:14:08.850
+We share the same frustrations.
+And today I'm really happen to be able to
+
+00:14:08.850 --> 00:14:15.060
+share something that we hope that will reach
+this goal of accessibility, something we've
+
+00:14:15.060 --> 00:14:22.060
+worked on hard.
+Since some of you probably don't know a lot
+
+00:14:27.420 --> 00:14:34.420
+about YouTube and the captioning services
+that we can do, I'd like to start by reviewing
+
+00:14:34.420 --> 00:14:38.800
+quickly some of what we already provide.
+And then we'll talk about the problems that
+
+00:14:38.800 --> 00:14:42.800
+we're facing.
+And lastly, we'll talk about how we're trying
+
+00:14:42.800 --> 00:14:49.800
+to solve those problems.
+First, I'll start with a little demonstration.
+
+00:14:53.300 --> 00:14:57.870
+This video is one we made when we first launched
+captions on YouTube.
+
+00:14:57.870 --> 00:15:04.870
+It was really fun making it.
+So let me play some.
+
+00:15:05.410 --> 00:15:12.410
+As you can see, I'm changing the size.
+People want to see sometimes more video than
+
+00:15:22.420 --> 00:15:25.050
+they want to see captions.
+But if you're in the back, you may want to
+
+00:15:25.050 --> 00:15:32.050
+see them a little bit bigger.
+Is that better?
+
+00:15:33.350 --> 00:15:40.350
+I'll explain the details later how to do it.
+Also, for some people who want to see more
+
+00:15:45.790 --> 00:15:52.790
+of the video, you can turn off the background.
+That's an option.
+
+00:15:53.339 --> 00:15:57.029
+Most people like the black background, as
+it makes it easier to read.
+
+00:15:57.029 --> 00:16:03.200
+So I'll leave it on that way.
+Can you read this all right?
+
+00:16:03.200 --> 00:16:10.200
+Is that
+
+00:16:48.890 --> 00:16:55.890
+all right for everyone?
+I should look in the back there.
+
+00:16:57.930 --> 00:17:02.680
+Okay.
+Let me play a little bit.
+
+00:17:02.680 --> 00:17:04.720
+(Video).
+(No audio).
+
+00:17:04.720 --> 00:17:06.760
+[ Laughter ]
+(Speaking French).
+
+00:17:06.760 --> 00:17:10.829
+&gt;&gt;Ken Harrenstien: He's speaking French.
+(Video.)
+
+00:17:10.829 --> 00:17:17.829
+&gt;&gt;Ken Harrenstien: Now, Japanese is being
+spoken.
+
+00:17:20.959 --> 00:17:25.760
+This person here, his name is HIROTO.
+He's our product manager.
+
+00:17:25.760 --> 00:17:29.640
+He's done a great job.
+Unfortunately, he couldn't come here today.
+
+00:17:29.640 --> 00:17:36.640
+But he's here on video.
+So what I just demonstrated is how captions
+
+00:17:38.780 --> 00:17:44.740
+have made videos accessible to everyone.
+It doesn't matter if you can hear or not.
+
+00:17:44.740 --> 00:17:50.160
+You know, for people who don't understand
+Japanese, if you don't understand sign language,
+
+00:17:50.160 --> 00:17:56.530
+it's all made accessible through captions.
+Now, suppose English isn't your first language.
+
+00:17:56.530 --> 00:18:02.740
+This has several captions that are already
+uploaded.
+
+00:18:02.740 --> 00:18:09.740
+So I'm able to pick another language.
+I'll pick this one.
+
+00:18:16.620 --> 00:18:23.620
+And does anyone speak this?
+(Non-English language).
+
+00:18:29.220 --> 00:18:36.220
+&gt;&gt;Ken Harrenstien: Now, suppose in that list
+of prepared captions you don't see the language
+
+00:18:40.320 --> 00:18:47.320
+that you want.
+As Vint mentioned already, we support 51 languages.
+
+00:18:47.570 --> 00:18:52.390
+So it's possible to translate to any one of
+those other languages.
+
+00:18:52.390 --> 00:18:59.390
+Some are better than the others.
+But let me show you.
+
+00:19:04.480 --> 00:19:07.250
+See this one?
+It says "translate captions."
+
+00:19:07.250 --> 00:19:14.250
+So I'll pick that.
+Now it's translating from English to -- let's
+
+00:19:15.750 --> 00:19:19.970
+pick one.
+Normally, I like to ask people to help me
+
+00:19:19.970 --> 00:19:22.600
+pick.
+But I know there's a few people who do speak
+
+00:19:22.600 --> 00:19:29.600
+French.
+So I'm going to go ahead and choose that.
+
+00:19:33.790 --> 00:19:40.790
+&gt;&gt;Video: (Captions French).
+&gt;&gt;Ken Harrenstien: What do you think?
+
+00:19:50.540 --> 00:19:57.540
+Is it okay?
+He still is speaking Japanese, but we can
+
+00:20:01.260 --> 00:20:08.260
+read it in French.
+Those things are wonderful for accessibility.
+
+00:20:15.500 --> 00:20:19.860
+But there's another very cool benefit of having
+captions.
+
+00:20:19.860 --> 00:20:26.860
+Because they are text, we can search on them.
+There's two things that we can do with that.
+
+00:20:28.040 --> 00:20:32.380
+It helps you find the video you're looking
+for.
+
+00:20:32.380 --> 00:20:37.470
+And, secondly, it helps you find the exact
+text you want within the video.
+
+00:20:37.470 --> 00:20:40.120
+Let me show you that.
+It's called a snippet.
+
+00:20:40.120 --> 00:20:43.970
+And you can jump directly to the snippet within
+the video that you're searching for.
+
+00:20:43.970 --> 00:20:50.970
+So let me demonstrate that next.
+Here, we see the page from Google.
+
+00:20:54.020 --> 00:21:00.390
+It's an advanced video search page.
+I've already put in the phrase that I want
+
+00:21:00.390 --> 00:21:03.480
+to search for.
+"That's one small step."
+
+00:21:03.480 --> 00:21:10.480
+This is one of my favorites.
+I've also checked this box "Search only closed-captioned
+
+00:21:11.950 --> 00:21:17.410
+videos."
+So we check that box.
+
+00:21:17.410 --> 00:21:24.410
+So here we go.
+I found several.
+
+00:21:27.480 --> 00:21:34.480
+It happens to know what I want.
+Now, you'll notice, it found snippets.
+
+00:21:45.200 --> 00:21:52.200
+And you'll know that by offering this option,
+start playing at search term.
+
+00:21:52.250 --> 00:21:55.460
+So I'll click that.
+And it will jump me right there.
+
+00:21:55.460 --> 00:22:01.570
+Well, actually, it jumps to a place just a
+little bit before, because it knows that you
+
+00:22:01.570 --> 00:22:06.220
+want a little bit of context first.
+It's slightly long, but I hope it's okay.
+
+00:22:06.220 --> 00:22:13.220
+&gt;&gt;Video: Today, the Google lunar X-prize is
+challenging free enterprise to reach much
+
+00:22:16.419 --> 00:22:23.419
+further, to the moon, to pave the way to harnessing
+its wealth of resources.
+
+00:22:26.150 --> 00:22:33.150
+Only days away, its earth's partner in a unique
+two-world system.
+
+00:22:34.840 --> 00:22:38.010
+That's one small step for man, one giant 
+--
+
+00:22:38.010 --> 00:22:40.660
+&gt;&gt;Ken Harrenstien: For a short video, it may
+not be that important.
+
+00:22:40.660 --> 00:22:45.530
+But if you have a really long video, this
+ability is very important.
+
+00:22:45.530 --> 00:22:51.590
+This is one of my favorite features.
+And, remember -- well, I actually had the
+
+00:22:51.590 --> 00:22:54.720
+opportunity to watch this live on TV years
+ago.
+
+00:22:54.720 --> 00:22:57.640
+But, of course, at that time, there were no
+captions, as you know.
+
+00:22:57.640 --> 00:23:04.640
+But now, I get to see it.
+Those things are all there.
+
+00:23:13.070 --> 00:23:20.070
+And they have been there in YouTube.
+Since we first launched captions more than
+
+00:23:24.669 --> 00:23:31.669
+a year ago -- I'm sorry, 2008, not '06 --
+ we're very surprised and pleased at how many
+
+00:23:34.880 --> 00:23:40.500
+videos have captions.
+There's a few hundred thousand videos that
+
+00:23:40.500 --> 00:23:47.500
+are captioned within YouTube.
+And we think that's a great number.
+
+00:23:48.360 --> 00:23:52.250
+So what do you think the problem is?
+Let me show you.
+
+00:23:52.250 --> 00:23:59.250
+(Video).
+&gt;&gt;Ken Harrenstien: Let me explain here.
+
+00:24:10.860 --> 00:24:16.700
+I tried to figure out a way to explain without
+including a lot of math what this problem
+
+00:24:16.700 --> 00:24:21.160
+is that we're encountering.
+So I came up with a visualization.
+
+00:24:21.160 --> 00:24:26.030
+You know the network is built with a bunch
+of pipes.
+
+00:24:26.030 --> 00:24:31.789
+The Internet is built with a bunch of pipes.
+It's true.
+
+00:24:31.789 --> 00:24:34.590
+And a lot of water runs through these Internet
+pipes.
+
+00:24:34.590 --> 00:24:40.049
+And they are really video.
+Okay?
+
+00:24:40.049 --> 00:24:46.490
+I happen to have some of that video here.
+Okay?
+
+00:24:46.490 --> 00:24:50.150
+[ Laughter ]
+&gt;&gt;Ken Harrenstien: This is special water.
+
+00:24:50.150 --> 00:24:55.450
+It happens to be captioned, captioned video.
+As you see, the water has -- the bottle has
+
+00:24:55.450 --> 00:24:57.650
+words on it.
+It's captioned.
+
+00:24:57.650 --> 00:25:04.650
+It's prepared for you. But --
+(Video playing.)
+
+00:25:08.919 --> 00:25:15.919
+&gt;&gt;Ken Harrenstien: This is our problem.
+Remember what Vint said earlier?
+
+00:25:20.730 --> 00:25:27.730
+Every minute we stand here and talk, people
+are uploading 20 to 23 hours of video.
+
+00:25:28.929 --> 00:25:33.360
+Not minutes.
+Hours.
+
+00:25:33.360 --> 00:25:36.490
+Not 23 videos themself.
+We're talking hours.
+
+00:25:36.490 --> 00:25:40.419
+So tons.
+And that's every minute, every day.
+
+00:25:40.419 --> 00:25:43.520
+Every month.
+It just -- it's coming in.
+
+00:25:43.520 --> 00:25:50.520
+(Video).
+&gt;&gt;Ken Harrenstien: Okay.
+
+00:25:56.200 --> 00:26:02.410
+So do you see any bottles there?
+Can't see any.
+
+00:26:02.410 --> 00:26:09.410
+Unfortunately, of all that content being uploaded,
+just a small amount is captioned.
+
+00:26:12.549 --> 00:26:17.960
+Very small.
+[ Music ]
+
+00:26:17.960 --> 00:26:24.960
+&gt;&gt;Ken Harrenstien: So the question is, who's
+going to bottle that water?
+
+00:26:32.200 --> 00:26:39.200
+At Google, we call that a problem of scale.
+How to scale.
+
+00:26:40.880 --> 00:26:47.880
+Fortunately, at Google and YouTube, our leaders
+are very passionate and want to support the
+
+00:26:49.840 --> 00:26:56.840
+solutions that address scale.
+Maybe you're not familiar with that word.
+
+00:26:57.520 --> 00:27:04.520
+But our CEO, his name is Eric Schmidt, he
+loves to talk about this issue.
+
+00:27:08.610 --> 00:27:11.960
+And he's a very clear speaker.
+So I would like to borrow some of his words.
+
+00:27:11.960 --> 00:27:18.960
+&gt;&gt;Video: -- tell you that it's time.
+It's time for us to take advantage of the
+
+00:27:19.410 --> 00:27:24.299
+amazing opportunity that is before us.
+And that's what I want to talk about.
+
+00:27:24.299 --> 00:27:27.299
+&gt;&gt;Ken Harrenstien: Do you notice anything
+different about these captions?
+
+00:27:27.299 --> 00:27:32.070
+No?
+Let me play some more.
+
+00:27:32.070 --> 00:27:36.299
+&gt;&gt;Video: -- today and tomorrow, you're going
+to have interesting product announcements,
+
+00:27:36.299 --> 00:27:42.070
+some fun stuff, and perhaps most important,
+you're going to spend time with the best programmers
+
+00:27:42.070 --> 00:27:48.210
+in the world who are here in the room.
+&gt;&gt;Ken Harrenstien: Do you notice anything
+
+00:27:48.210 --> 00:27:51.669
+different?
+There's some mistakes.
+
+00:27:51.669 --> 00:27:58.669
+What do you see?
+Yes.
+
+00:28:02.470 --> 00:28:07.700
+Yes, there's no person who made these captions.
+This was machine-made.
+
+00:28:07.700 --> 00:28:10.140
+Yes, it's true.
+We did it.
+
+00:28:10.140 --> 00:28:11.919
+This is finally it.
+We got it.
+
+00:28:11.919 --> 00:28:18.919
+[ Applause ]
+&gt;&gt;Ken Harrenstien: Yes.
+
+00:28:18.980 --> 00:28:25.980
+I am so excited and so proud, pleased to announce
+that we are launching this, the speech recognition
+
+00:28:27.240 --> 00:28:34.240
+and YouTube combined to make captions.
+[ Applause ]
+
+00:28:34.760 --> 00:28:41.760
+&gt;&gt;Ken Harrenstien: And first, a little enjoyment.
+Let me add something else here.
+
+00:28:53.059 --> 00:29:00.059
+&gt;&gt;Video: -- literally, you all.
+And we're very excited to have you here.
+
+00:29:07.000 --> 00:29:14.000
+From my perspective, it's time.
+We have spent 20 years trying to build a programming
+
+00:29:15.190 --> 00:29:21.539
+model that's the --
+&gt;&gt;Ken Harrenstien: It's good, yeah?
+
+00:29:21.539 --> 00:29:25.090
+It's good.
+Completely machine-generated.
+
+00:29:25.090 --> 00:29:32.090
+Speech recognition to English to French.
+I -- when you think about that, what it means,
+
+00:29:32.100 --> 00:29:35.720
+it's wonderful.
+I mean, I just love this Internet.
+
+00:29:35.720 --> 00:29:40.059
+It's just so exciting to see this.
+I've been dreaming about this day for so many
+
+00:29:40.059 --> 00:29:42.590
+years.
+I mean, I'm just so excited to see it's actually
+
+00:29:42.590 --> 00:29:49.590
+happened.
+
+00:29:53.150 --> 00:30:00.150
+I do need to caution you a little bit.
+For this very early launch, you can only see
+
+00:30:01.059 --> 00:30:08.059
+those machine-generated captions we call automatic
+captions, auto captions, you can only see
+
+00:30:10.020 --> 00:30:17.020
+them for 13 educational partners who have
+agreed to join into this early launch.
+
+00:30:17.750 --> 00:30:23.750
+Of course, we want to increase that number,
+add more channels and partners, as fast as
+
+00:30:23.750 --> 00:30:30.750
+we can.
+I want to show you how people will turn on
+
+00:30:31.809 --> 00:30:38.330
+this feature when it becomes available.
+Let me do another one here.
+
+00:30:38.330 --> 00:30:44.740
+&gt;&gt;Video: -- details are located at that URL.
+We will take submissions for the contest in
+
+00:30:44.740 --> 00:30:47.559
+August.
+Judging will occur through the fall and we'll
+
+00:30:47.559 --> 00:30:54.559
+announce our winners in the fall.
+&gt;&gt;Ken Harrenstien: There's no captions.
+
+00:30:56.360 --> 00:31:03.360
+Now, you notice a new option.
+It says "transcribe audio."
+
+00:31:03.580 --> 00:31:10.580
+Let me pick that one.
+What comes up is a box.
+
+00:31:10.919 --> 00:31:17.919
+I'm not sure if all of you can read it.
+It says transcribe audio is an experimental
+
+00:31:18.120 --> 00:31:23.669
+service that uses Google's speech-recognition
+technologies to provide automated captions
+
+00:31:23.669 --> 00:31:29.630
+for video.
+That box will come up every time.
+
+00:31:29.630 --> 00:31:31.900
+I know it might be annoying, but it's very
+important.
+
+00:31:31.900 --> 00:31:37.750
+Because being an early and new launch, we
+want to make it clear to people that these
+
+00:31:37.750 --> 00:31:43.049
+captions are not from the owner of the video.
+They have nothing to do with this.
+
+00:31:43.049 --> 00:31:47.970
+We're trying to generate these for you as
+best as we can.
+
+00:31:47.970 --> 00:31:54.520
+And you will see why.
+&gt;&gt;Video: We've learned a few things from American
+
+00:31:54.520 --> 00:31:57.210
+Idol.
+So we will have user votes as part of the
+
+00:31:57.210 --> 00:31:59.929
+judging.
+We think this contest is going to be really,
+
+00:31:59.929 --> 00:32:04.380
+really exciting.
+Number two, I'd like to announce that we're
+
+00:32:04.380 --> 00:32:10.340
+going to give away to every conference attendee
+today, all 4,000 of you --
+
+00:32:10.340 --> 00:32:16.650
+&gt;&gt;Ken Harrenstien: I'll show you another 
+-- it's still coming on here, this example.
+
+00:32:16.650 --> 00:32:21.279
+This man is talking about giving away Android
+phones.
+
+00:32:21.279 --> 00:32:26.630
+And he's also giving away something else that's
+pretty interesting.
+
+00:32:26.630 --> 00:32:30.799
+&gt;&gt;Video: We went one step further.
+Included in every device --
+
+00:32:30.799 --> 00:32:36.210
+[ Laughter ]
+&gt;&gt;Ken Harrenstien: He's giving away salmon.
+
+00:32:36.210 --> 00:32:41.250
+Sorry.
+Not today, though.
+
+00:32:41.250 --> 00:32:48.059
+Really, he is talking about sim, SIM, the
+sim cards that we put in phones.
+
+00:32:48.059 --> 00:32:54.919
+Context, you can sort of figure it out.
+But you will see many of those types of mistakes.
+
+00:32:54.919 --> 00:33:01.919
+And that leads me to another big thing that
+I want to talk about here.
+
+00:33:02.419 --> 00:33:09.419
+And that is quality.
+Remember, our mission is to try and make all
+
+00:33:10.870 --> 00:33:15.659
+the information accessible to everyone.
+And that includes video.
+
+00:33:15.659 --> 00:33:22.659
+But right now, we can only recognize English
+and do the machine translation for English.
+
+00:33:26.070 --> 00:33:31.260
+And within the English videos, some are not
+very suitable, because there may be background
+
+00:33:31.260 --> 00:33:34.419
+noise.
+And that includes music.
+
+00:33:34.419 --> 00:33:41.419
+That's noisy.
+Strong accents, strange vocabulary.
+
+00:33:41.900 --> 00:33:48.640
+So you will see a lot of different captions
+that aren't what they're speaking.
+
+00:33:48.640 --> 00:33:55.640
+But we are concerned about the quality.
+In fact, during the development of this, we
+
+00:33:55.929 --> 00:34:01.760
+had many discussions at Google and YouTube,
+asking ourselves, is this good enough?
+
+00:34:01.760 --> 00:34:05.840
+Should we wait until we have improvements?
+Should we launch now?
+
+00:34:05.840 --> 00:34:08.970
+I kept saying, no, don't worry about it.
+I like it.
+
+00:34:08.970 --> 00:34:13.960
+I love it.
+Compared to nothing, oh, this is wonderful.
+
+00:34:13.960 --> 00:34:20.960
+It's important to me that I know for any video,
+I can get the best-quality captions possible.
+
+00:34:22.929 --> 00:34:27.050
+I know they won't be great or perfect.
+But I know, over time, we will get them better
+
+00:34:27.050 --> 00:34:29.649
+and continue to improve.
+That's important.
+
+00:34:29.649 --> 00:34:36.649
+We'll continue improving these.
+Fortunately, Google and YouTube have a strong
+
+00:34:41.200 --> 00:34:46.020
+culture, as Vint already mentioned.
+We launch early and quickly.
+
+00:34:46.020 --> 00:34:51.520
+We do beta launches.
+As fast as we can get it out there, that's
+
+00:34:51.520 --> 00:34:55.070
+ -- means the faster we get feedback, do people
+like this?
+
+00:34:55.070 --> 00:34:56.730
+Do they not like it?
+What do they like?
+
+00:34:56.730 --> 00:35:03.730
+What do they want us to focus on?
+What do we work on next?
+
+00:35:04.030 --> 00:35:10.270
+So you're part of this experiment.
+In fact, that's a big reason why we've invited
+
+00:35:10.270 --> 00:35:14.630
+all of you here today.
+So you can help us.
+
+00:35:14.630 --> 00:35:21.630
+You're the first people to see this.
+And we want you to give us feedback.
+
+00:35:23.430 --> 00:35:28.960
+We'll have plenty of time for that during
+the Q&amp;A, I hope.
+
+00:35:28.960 --> 00:35:35.960
+And also after that.
+One last thing I want to add about how to
+
+00:35:36.750 --> 00:35:43.750
+improve the quality.
+You know, machine-generated captions, these
+
+00:35:44.230 --> 00:35:51.230
+automated captions, are not perfect.
+It will -- it takes a very long time before
+
+00:35:51.589 --> 00:35:57.420
+it will ever reach the quality of human-made
+captions.
+
+00:35:57.420 --> 00:36:03.270
+So what are we going to do about that?
+So for looking at this, I'd like to take the
+
+00:36:03.270 --> 00:36:07.869
+problem and sort of look on the other side
+and see.
+
+00:36:07.869 --> 00:36:12.300
+We've tried to lower the bar for accessibility
+for those who are watching the videos.
+
+00:36:12.300 --> 00:36:16.380
+But what about the people who own videos,
+who are uploading the videos?
+
+00:36:16.380 --> 00:36:23.380
+How do we lower the barriers for them?
+To help answer that question, one of -- that
+
+00:36:23.900 --> 00:36:28.609
+will be our next speaker.
+I've kind of teased her, given her the title
+
+00:36:28.609 --> 00:36:32.640
+as caption evangelist.
+And this is Naomi.
+
+00:36:32.640 --> 00:36:35.080
+Naomi B., are you standing here?
+[ Applause ]
+
+00:36:35.080 --> 00:36:40.010
+&gt;&gt;Naomi Bilodeau: Thank you, Ken.
+So I thought I would start by telling you
+
+00:36:40.010 --> 00:36:43.330
+a little bit about me.
+I'm a channel owner on YouTube.
+
+00:36:43.330 --> 00:36:46.839
+How many of you know what that means?
+No idea.
+
+00:36:46.839 --> 00:36:51.150
+Okay.
+How many of you have ever uploaded a video
+
+00:36:51.150 --> 00:36:54.359
+to YouTube?
+So all of you are channel owners.
+
+00:36:54.359 --> 00:36:58.790
+A channel owner is just somebody who's logged
+into YouTube and uploaded a video.
+
+00:36:58.790 --> 00:37:01.099
+So I'm a channel owner for Google channels
+and YouTube channels.
+
+00:37:01.099 --> 00:37:06.510
+So you can imagine, I upload a lot of video
+content.
+
+00:37:06.510 --> 00:37:11.849
+So what I'd like to talk to you about today
+is, as a channel owner on YouTube, there are
+
+00:37:11.849 --> 00:37:14.760
+three things.
+First, I'm going to show you how captioning
+
+00:37:14.760 --> 00:37:19.740
+works now in YouTube for everyone.
+Second, I'm going to show you a new feature,
+
+00:37:19.740 --> 00:37:25.310
+another new feature, also from speech recognition,
+that helps channel owners.
+
+00:37:25.310 --> 00:37:29.500
+And, third, I'm going to show you how the
+automatic captioning that Ken already showed
+
+00:37:29.500 --> 00:37:32.880
+you, how that helps channel owners with their
+content captioning efforts.
+
+00:37:32.880 --> 00:37:38.330
+So, first of all, I'm going to show you how
+a channel owner would upload captions now.
+
+00:37:38.330 --> 00:37:42.530
+This isn't new.
+This has been working on YouTube since 2008.
+
+00:37:42.530 --> 00:37:46.500
+So if I want to upload captions, the first
+thing I need is a caption file.
+
+00:37:46.500 --> 00:37:53.500
+Let me show you what that looks like.
+So I'm opening this file on my desktop.
+
+00:37:54.680 --> 00:37:59.380
+It's called EricKeynote.SBV.
+This is a caption file.
+
+00:37:59.380 --> 00:38:02.920
+There's no one caption format.
+This is an example of one.
+
+00:38:02.920 --> 00:38:06.440
+But, in fact, there's no standard.
+But most caption files look pretty similar.
+
+00:38:06.440 --> 00:38:06.690
+Let me see if this mike is on.
+Excellent, it is.
+
+00:38:06.450 --> 00:38:13.450
+So I'm going to come over here and show you
+what's in this file.
+
+00:38:13.710 --> 00:38:17.810
+You're probably not familiar with this.
+At the top of the file, I have some numbers.
+
+00:38:17.810 --> 00:38:20.480
+In fact, that line contains two numbers, separated
+by a comma.
+
+00:38:20.480 --> 00:38:25.930
+I first number tells YouTube or any video
+player when to start playing the text.
+
+00:38:25.930 --> 00:38:29.150
+The second number tells it when to stop playing
+the text.
+
+00:38:29.150 --> 00:38:32.980
+And then below it, we have text.
+And in this example, these captions actually
+
+00:38:32.980 --> 00:38:36.810
+tell me a little bit about what's going on.
+The first text says "man" and then there's
+
+00:38:36.810 --> 00:38:39.200
+a colon.
+So I know who's speaking.
+
+00:38:39.200 --> 00:38:42.650
+Then there's a line break and it says "ladies
+and gentlemen" and there's a comma.
+
+00:38:42.650 --> 00:38:47.010
+And then the next caption starts.
+You can see, again, we have a time code.
+
+00:38:47.010 --> 00:38:49.359
+As we go through the file, this file is just
+text.
+
+00:38:49.359 --> 00:38:53.910
+I can open it in any text editor.
+We have every single caption that I want to
+
+00:38:53.910 --> 00:38:57.240
+show in the video.
+So anybody who can prepare a file like this
+
+00:38:57.240 --> 00:39:02.010
+can add captions to their video.
+This is much easier than doing video production.
+
+00:39:02.010 --> 00:39:03.310
+Let me show you how this works.
+So I'm going to go back into YouTube here,
+
+00:39:03.310 --> 00:39:03.849
+I'm going to close this file.
+Goodbye, file.
+
+00:39:03.849 --> 00:39:08.869
+And I'm going to go find that video.
+Oh, sorry.
+
+00:39:08.869 --> 00:39:15.869
+I've just forgotten what file that was.
+Okay, it's Eric's keynote.
+
+00:39:16.640 --> 00:39:23.640
+Let's go Google I/O keynote, day two.
+And this is actually one of the videos that
+
+00:39:23.770 --> 00:39:30.770
+I uploaded on my channel, which is called
+the Google developer's channel.
+
+00:39:31.660 --> 00:39:38.070
+If you went to the URL, you would find my
+videos.
+
+00:39:38.070 --> 00:39:39.099
+Here it is.
+Here's the keynote.
+
+00:39:39.099 --> 00:39:42.580
+You've seen this video already; right?
+Do you remember -- Let me turn that off.
+
+00:39:42.580 --> 00:39:45.630
+It's noisy.
+Okay.
+
+00:39:45.630 --> 00:39:51.140
+So I click over here on captions and subtitles.
+This option appears because I'm the video
+
+00:39:51.140 --> 00:39:56.820
+owner.
+And I click add new captions or transcript,
+
+00:39:56.820 --> 00:39:59.960
+and I choose my file.
+And I go over here.
+
+00:39:59.960 --> 00:40:05.250
+Here's my file, Eric keynote.SBV.
+I choose it and give it the language.
+
+00:40:05.250 --> 00:40:08.290
+Ken showed you a video that had lots of different
+languages.
+
+00:40:08.290 --> 00:40:14.040
+I can add different languages here.
+I tell it what language the video is in, English.
+
+00:40:14.040 --> 00:40:17.280
+I say, upload it, go.
+There it is.
+
+00:40:17.280 --> 00:40:22.829
+So here I can click on "English."
+And here's my time code file.
+
+00:40:22.829 --> 00:40:26.099
+So here we are in YouTube.
+I have time codes.
+
+00:40:26.099 --> 00:40:29.020
+I have start time code, end time code.
+Here's the text.
+
+00:40:29.020 --> 00:40:33.079
+YouTube knows all that information that was
+in my text file and it can use it to play
+
+00:40:33.079 --> 00:40:36.190
+those captions on the video.
+This is my file.
+
+00:40:36.190 --> 00:40:39.000
+I own it.
+If I want to, I can go download the caption
+
+00:40:39.000 --> 00:40:41.570
+file later if I don't remember where I stored
+it.
+
+00:40:41.570 --> 00:40:47.849
+And I can take that file, send it out to translation,
+and then I can get a French or Spanish version
+
+00:40:47.849 --> 00:40:51.440
+or maybe a Klingon version.
+I don't think Klingon is officially supported
+
+00:40:51.440 --> 00:40:54.430
+on YouTube.
+But we could upload them.
+
+00:40:54.430 --> 00:41:01.430
+Let me go back.
+That's how we uploaded captions to video on
+
+00:41:01.880 --> 00:41:04.770
+YouTube.
+When I saw this feature, I got really excited.
+
+00:41:04.770 --> 00:41:09.349
+This is how I met Ken and how I became a caption
+evangelist at Google.
+
+00:41:09.349 --> 00:41:12.250
+I thought, this is amazing.
+I have to go forth and caption every video
+
+00:41:12.250 --> 00:41:15.410
+that Google posts, because this is so easy
+and so awesome.
+
+00:41:15.410 --> 00:41:19.200
+We have to go do this.
+So that worked out really well for me.
+
+00:41:19.200 --> 00:41:23.220
+But I looked around, and I noticed there weren't
+a lot of channels that were captioning their
+
+00:41:23.220 --> 00:41:25.530
+videos.
+And I wondered why that was.
+
+00:41:25.530 --> 00:41:29.740
+And I think the reason is, uploading videos
+to YouTube is really easy.
+
+00:41:29.740 --> 00:41:32.780
+It's simple.
+But preparing a time code file is hard for
+
+00:41:32.780 --> 00:41:37.579
+a lot of people.
+Imagine a young teenager who's uploading videos
+
+00:41:37.579 --> 00:41:41.410
+for their friends to YouTube.
+They're not going to have this kind of expertise
+
+00:41:41.410 --> 00:41:43.930
+and they're probably not going to be that
+interested in learning.
+
+00:41:43.930 --> 00:41:50.579
+So could we make this any easier?
+And the answer is, yes.
+
+00:41:50.579 --> 00:41:53.010
+So now I'm going to show you a second new
+feature.
+
+00:41:53.010 --> 00:41:56.829
+This new feature is called automatic timing
+for captions on YouTube.
+
+00:41:56.829 --> 00:42:01.329
+And this is something that all channel owners,
+once we launch this later this week, all channel
+
+00:42:01.329 --> 00:42:08.280
+owners on YouTube will be able to do this.
+So the first question is, okay, so to do this,
+
+00:42:08.280 --> 00:42:12.829
+rather than make a caption file, what I'm
+going to show you is a transcript file.
+
+00:42:12.829 --> 00:42:16.520
+Here's an example of one for a video we shot
+last week.
+
+00:42:16.520 --> 00:42:19.160
+This is a video we're going to post to the
+Google blog.
+
+00:42:19.160 --> 00:42:22.900
+It shows you how to use all these features.
+So here's the text.
+
+00:42:22.900 --> 00:42:27.000
+We prepared the text ahead of time, because
+when we were shooting the video, we didn't
+
+00:42:27.000 --> 00:42:29.230
+want to make mistakes.
+We filmed this text.
+
+00:42:29.230 --> 00:42:32.619
+We have somebody speaking it in the voiceover.
+So I already have this.
+
+00:42:32.619 --> 00:42:39.619
+Now I'm going to go into YouTube, and I'm
+going to go to my channel.
+
+00:42:41.109 --> 00:42:42.440
+Here's my videos.
+I'm going to click here on "captions."
+
+00:42:42.440 --> 00:42:45.280
+This is just -- if you're a channel owner,
+you might be familiar with this view.
+
+00:42:45.280 --> 00:42:48.820
+This is where you can see all of your videos.
+And in this view, the button says "captions."
+
+00:42:48.820 --> 00:42:50.760
+But it's actually taking us to the same page
+here.
+
+00:42:50.760 --> 00:42:57.760
+And now I can click "add new captions or transcript."
+I'm going to choose a file, just like I did
+
+00:42:59.890 --> 00:43:03.950
+before.
+And I say, okay, now I have this option here.
+
+00:43:03.950 --> 00:43:06.220
+We -- our old file we did, that was a captioned
+file.
+
+00:43:06.220 --> 00:43:09.680
+Now there's another option in YouTube that
+says "transcript file."
+
+00:43:09.680 --> 00:43:13.790
+It says "English only," because this is relying
+on speech-to-text technology, right now, we
+
+00:43:13.790 --> 00:43:20.599
+can only do that for English.
+And I say, okay, upload file, go.
+
+00:43:20.599 --> 00:43:21.369
+This is going to take a little while.
+So I'm going to talk.
+
+00:43:21.369 --> 00:43:28.369
+One of the things that I think is important
+to mention, Ken has already told you why captions
+
+00:43:28.380 --> 00:43:32.329
+ -- I'm going to take this so I can wander
+around -- Ken has already told you why captions
+
+00:43:32.329 --> 00:43:35.320
+are important for viewers.
+And you know why they're important for viewers,
+
+00:43:35.320 --> 00:43:37.680
+because you're viewers.
+But I'm a channel owner.
+
+00:43:37.680 --> 00:43:39.930
+So I want to tell you why this is important
+for me.
+
+00:43:39.930 --> 00:43:43.700
+Captions are important to me because I want
+to reach a bigger audience.
+
+00:43:43.700 --> 00:43:48.869
+If I caption my videos, I can reach deaf and
+hard of hearing audience, I can reach people
+
+00:43:48.869 --> 00:43:52.790
+who may be immigrants to the United States,
+who read English well but don't understand
+
+00:43:52.790 --> 00:43:56.920
+it well when it's spoken.
+I can reach people who hadn't found my video
+
+00:43:56.920 --> 00:43:59.060
+except they did a search and the caption file
+came up.
+
+00:43:59.060 --> 00:44:04.290
+So you can see that as a video owner, by adding
+a captioned file to my video, whether I'm
+
+00:44:04.290 --> 00:44:08.630
+doing it from a captioned file or a transcript,
+as I'm about to show you, adding these captions
+
+00:44:08.630 --> 00:44:12.490
+make that video much more useful and much
+more accessible to a really wide audience.
+
+00:44:12.490 --> 00:44:16.040
+So, to me as a channel owner, this is really
+important and exciting.
+
+00:44:16.040 --> 00:44:22.470
+Because I want my videos to be watched by
+as many people as possible.
+
+00:44:22.470 --> 00:44:26.869
+Okay.
+Let me actually go back -- actually, it's
+
+00:44:26.869 --> 00:44:28.760
+done.
+I'm going to do this in different order because
+
+00:44:28.760 --> 00:44:29.930
+it finished so quickly.
+Hang on.
+
+00:44:29.930 --> 00:44:35.040
+Let me show you what's happened.
+Remember, we uploaded that video file?
+
+00:44:35.040 --> 00:44:40.040
+Let me show you the file in case you've forgotten
+while I was telling you about how awesome
+
+00:44:40.040 --> 00:44:43.790
+captions are.
+Here's what the file is, just text.
+
+00:44:43.790 --> 00:44:49.359
+And I go here.
+And now I have this in YouTube.
+
+00:44:49.359 --> 00:44:54.089
+You see there are time codes here?
+So what YouTube did is it took my transcript
+
+00:44:54.089 --> 00:44:59.170
+file and it went through it and it said, when
+were these words spoken aloud in the video?
+
+00:44:59.170 --> 00:45:04.089
+And it computed a time code.
+And then it calculated the time code for me.
+
+00:45:04.089 --> 00:45:07.290
+So I don't have to go to all the trouble of
+figuring out where those time codes are.
+
+00:45:07.290 --> 00:45:10.070
+I don't know if any of you have ever tried
+to make a caption file, but it's a little
+
+00:45:10.070 --> 00:45:13.020
+bit fiddley.
+So YouTube did this for me.
+
+00:45:13.020 --> 00:45:17.240
+All I had to have was the text, and I already
+had it.
+
+00:45:17.240 --> 00:45:19.410
+Now I have a caption file.
+I can download it.
+
+00:45:19.410 --> 00:45:22.680
+Let me show you.
+Here it is.
+
+00:45:22.680 --> 00:45:26.400
+It's gone to my desktop.
+Let's go open it.
+
+00:45:26.400 --> 00:45:30.599
+Here's the file.
+It's called captions .SBV.text.
+
+00:45:30.599 --> 00:45:36.470
+Oh, look, caption file.
+Let me show you these side by side so you
+
+00:45:36.470 --> 00:45:36.800
+can really see the difference.
+Okay.
+
+00:45:36.800 --> 00:45:43.800
+So here on the left --
+[ Applause ]
+
+00:45:52.040 --> 00:45:59.040
+&gt;&gt;Naomi Bilodeau: So you guys are applauding
+me because I'm the one up here with the mike.
+
+00:46:05.490 --> 00:46:10.530
+But I really have to thank the guys on the
+Google audio team who built the amazing speech-to-text
+
+00:46:10.530 --> 00:46:14.810
+technology that makes this happen and the
+people at YouTube and people like Ken.
+
+00:46:14.810 --> 00:46:17.869
+There's a lot of pieces at Google that all
+came together to make this happen.
+
+00:46:17.869 --> 00:46:21.680
+I'm just standing up here with the mike telling
+you how awesome this is.
+
+00:46:21.680 --> 00:46:25.859
+So let me tell you how awesome this is.
+Over here, we have the time codes.
+
+00:46:25.859 --> 00:46:31.170
+You can see, if you look at the original transcript,
+it's actually put in line breaks for me.
+
+00:46:31.170 --> 00:46:35.349
+Where I had line breaks, it's respecting them.
+You can see today starts on its own line.
+
+00:46:35.349 --> 00:46:38.460
+And again in the caption file, it starts on
+its own line.
+
+00:46:38.460 --> 00:46:43.609
+So if I, as the video owner, want to control
+where the line breaks are, I can put in line
+
+00:46:43.609 --> 00:46:46.640
+breaks, and they'll come through to the caption.
+And if I don't know what I'm doing and I don't
+
+00:46:46.640 --> 00:46:52.109
+care, I can make one big long paragraph and
+it will break it into nice-length captions.
+
+00:46:52.109 --> 00:46:55.940
+I can -- I downloaded this file from YouTube.
+You saw that wasn't very hard.
+
+00:46:55.940 --> 00:47:01.280
+I can take that file and send it for translation.
+I might want to adjust where the caption breaks
+
+00:47:01.280 --> 00:47:03.030
+are.
+I can do that, 'cause I have all the time
+
+00:47:03.030 --> 00:47:06.310
+codes.
+Now I'm going to show you one last thing.
+
+00:47:06.310 --> 00:47:12.349
+Let's go back to Safari.
+Let's go back all the way.
+
+00:47:12.349 --> 00:47:19.349
+Let me find that video.
+Google I/O keynote.
+
+00:47:21.790 --> 00:47:26.770
+I want to find the video that Ken showed you
+with Vic Gundotra speaking.
+
+00:47:26.770 --> 00:47:32.970
+Let's see.
+It's part 10, the one where he gives away
+
+00:47:32.970 --> 00:47:35.710
+the phones.
+Here it is.
+
+00:47:35.710 --> 00:47:37.569
+Okay.
+So I'm the channel owner.
+
+00:47:37.569 --> 00:47:42.040
+I own this video.
+And this video happens to have been machine-transcribed
+
+00:47:42.040 --> 00:47:45.380
+using the caption transcript feature that
+Ken showed you.
+
+00:47:45.380 --> 00:47:52.380
+So if I go into captions and subtitles, I'm
+just clicking here as the owner, I see this
+
+00:47:52.630 --> 00:47:54.410
+track here.
+It says English, machine transcription.
+
+00:47:54.410 --> 00:47:57.089
+What is this?
+This is the speech-to-text transcript that
+
+00:47:57.089 --> 00:48:01.140
+was provided for me.
+So I can click on this.
+
+00:48:01.140 --> 00:48:05.690
+And you see here, I have time codes.
+I have text.
+
+00:48:05.690 --> 00:48:11.339
+No person created these time-coded captions.
+In some cases, they will be pretty bad.
+
+00:48:11.339 --> 00:48:13.839
+In other cases, like this one, they're actually
+quite good.
+
+00:48:13.839 --> 00:48:20.190
+So I can go over here, click download.
+Let's go back to my desktop to find it.
+
+00:48:20.190 --> 00:48:23.000
+Where did it go?
+It's this one, I think.
+
+00:48:23.000 --> 00:48:25.569
+Captions 1.SBV.
+Here it is.
+
+00:48:25.569 --> 00:48:31.849
+It's the time-coded file, produced by machine.
+And I can go in and I can find that line about
+
+00:48:31.849 --> 00:48:33.790
+the salmon.
+I can fix it.
+
+00:48:33.790 --> 00:48:39.180
+And I can reupload it.
+So what this technology has done as a channel
+
+00:48:39.180 --> 00:48:42.089
+owner is, it's saved me an awful a lot of
+typing.
+
+00:48:42.089 --> 00:48:46.260
+So I've just shown you some new features from
+the channel owner's side that we really hope
+
+00:48:46.260 --> 00:48:49.589
+are going to help more channel owners add
+more captions to their videos.
+
+00:48:49.589 --> 00:48:53.760
+With that, I'd like to hand this back to Vint.
+[ Applause ]
+
+00:48:53.760 --> 00:49:00.760
+&gt;&gt;Vint Cerf: Well, you've just seen how powerful
+computing technology can be, especially when
+
+00:49:03.599 --> 00:49:10.599
+all the different parts of communications
+can be linked together.
+
+00:49:10.980 --> 00:49:17.980
+And here, you've seen the merging of various
+kinds of technology, speech-to-text, we haven't
+
+00:49:19.770 --> 00:49:23.450
+got text-to-speech demonstrated here, but
+we do that, too.
+
+00:49:23.450 --> 00:49:29.609
+What's important here is the enabling capability
+that you've just seen.
+
+00:49:29.609 --> 00:49:36.609
+I'll be very interested to hear from Marc
+Okrand and others whose work involves producing
+
+00:49:36.700 --> 00:49:41.410
+these things.
+My guess is that this kind of technology can
+
+00:49:41.410 --> 00:49:48.190
+make this whole process much more efficient,
+and, therefore, much easier and perhaps less
+
+00:49:48.190 --> 00:49:52.910
+costly to accomplish, which means more video
+can be captioned.
+
+00:49:52.910 --> 00:49:58.720
+Now, we have an opportunity to do some Q&amp;A.
+I'm going to go to that in just a moment.
+
+00:49:58.720 --> 00:50:03.160
+I actually have a bunch of questions myself
+for my colleagues.
+
+00:50:03.160 --> 00:50:07.490
+So if no one else asks anything, I've got
+a whole bunch of them, just listening to what's
+
+00:50:07.490 --> 00:50:12.140
+going on here.
+But this is simply a stunning example of what
+
+00:50:12.140 --> 00:50:18.079
+happens when you put technologists together
+with different kinds of expertise.
+
+00:50:18.079 --> 00:50:23.819
+We have a research group -- I'm part of that
+group, although I don't claim to have contributed
+
+00:50:23.819 --> 00:50:27.619
+very much, and certainly nothing here except
+enthusiasm.
+
+00:50:27.619 --> 00:50:32.810
+But what's important is that the speech understanding
+group, the speech recognition group, had to
+
+00:50:32.810 --> 00:50:36.440
+come together with the people who understood
+ways in which to do captions.
+
+00:50:36.440 --> 00:50:40.560
+Now, here's something interesting about what
+you just saw.
+
+00:50:40.560 --> 00:50:46.230
+The way the captions work in the YouTube world
+is different from the way the captions work
+
+00:50:46.230 --> 00:50:53.230
+in today's video world.
+You are aware, I'm sure, of the late '70s,
+
+00:50:53.230 --> 00:50:58.920
+when we had line 21 captioning, and we fought
+very hard, some of us, to put that in, even
+
+00:50:58.920 --> 00:51:02.440
+though there were people saying, well, there
+were better ways to do it and we should wait
+
+00:51:02.440 --> 00:51:08.190
+until video text was available, because it
+would have a wider variety of symbols that
+
+00:51:08.190 --> 00:51:10.720
+could be expressed.
+And most of us said, the heck with that.
+
+00:51:10.720 --> 00:51:16.020
+Just get something up so we can appreciate
+video like everyone else does.
+
+00:51:16.020 --> 00:51:21.700
+Then, of course, we've come to high-definition
+television.
+
+00:51:21.700 --> 00:51:26.579
+By the way, I should tell you that YouTube
+has just announced that it can put up 1080P,
+
+00:51:26.579 --> 00:51:32.339
+the highest resolution, highest definition
+that you can watch on YouTube.
+
+00:51:32.339 --> 00:51:34.460
+So we're moving ahead with the rest of the
+industry.
+
+00:51:34.460 --> 00:51:41.250
+But some of you probably know that high-definition
+captioning hasn't worked terribly well.
+
+00:51:41.250 --> 00:51:47.160
+It's, I would say, erratic.
+The Federal Communications Commission has
+
+00:51:47.160 --> 00:51:53.329
+a whole group assigned to work on that problem.
+And I can tell you that on behalf of Google,
+
+00:51:53.329 --> 00:51:56.359
+I'm going to be digging as deep into that
+as I can.
+
+00:51:56.359 --> 00:52:00.710
+But what's very interesting about what you're
+seeing here is that the captions are being
+
+00:52:00.710 --> 00:52:05.109
+delivered differently than they are with traditional
+television.
+
+00:52:05.109 --> 00:52:11.329
+They are distinct and separate channels, so
+to speak, not in the sense that Naomi was
+
+00:52:11.329 --> 00:52:17.710
+talking about, but in the sense of the source
+of the captions is independent of the video.
+
+00:52:17.710 --> 00:52:20.450
+They're obviously linked together by the time
+codes.
+
+00:52:20.450 --> 00:52:27.310
+But because they are segregated, we can do
+all these things to manipulate the text file.
+
+00:52:27.310 --> 00:52:32.839
+We can translate from one language to another.
+We can automatically do the partitioning.
+
+00:52:32.839 --> 00:52:36.339
+We can give you the transcript so you can
+do editing on it.
+
+00:52:36.339 --> 00:52:43.170
+You don't have to have all the kinds of equipment
+that are needed to decode the captions or
+
+00:52:43.170 --> 00:52:46.349
+to encode the captions.
+It's a separate process.
+
+00:52:46.349 --> 00:52:53.160
+This separation of the two media, the text
+medium and the video medium, creates opportunities
+
+00:52:53.160 --> 00:52:59.260
+that would not otherwise exist.
+And so when you think about things like I.P.
+
+00:52:59.260 --> 00:53:06.260
+TV, you should not be thinking of just generating
+and distributing a kind of condensed combined
+
+00:53:10.530 --> 00:53:16.970
+medium, but, rather, one in which the separation
+is important because of the ability to manipulate
+
+00:53:16.970 --> 00:53:19.339
+it.
+And so if we're looking towards the future
+
+00:53:19.339 --> 00:53:25.160
+of this medium, the ability to separately
+manage these different streams is absolutely
+
+00:53:25.160 --> 00:53:28.940
+critical.
+Oddly enough, there is something kind of like
+
+00:53:28.940 --> 00:53:33.150
+that in the video world where you have different
+audio overlays.
+
+00:53:33.150 --> 00:53:38.180
+You can have different channels with different
+audio for Spanish and English and French and
+
+00:53:38.180 --> 00:53:42.280
+so on.
+But here, we are keeping these media distinct
+
+00:53:42.280 --> 00:53:47.400
+and manipulable.
+I don't have much to say in closing, except
+
+00:53:47.400 --> 00:53:51.410
+I want to acknowledge some people who have
+made this happen.
+
+00:53:51.410 --> 00:53:57.589
+And to do that, if you'll hold onto the microphone
+for a minute.
+
+00:53:57.589 --> 00:54:03.000
+Glasses again.
+Okay.
+
+00:54:03.000 --> 00:54:10.000
+So -- I hate paper -- there.
+Okay, so not everyone is here, but a lot of
+
+00:54:17.960 --> 00:54:21.190
+people are here.
+I'm going to name the folks who are here,
+
+00:54:21.190 --> 00:54:26.849
+and plus a few that aren't.
+I want them to please stand up and accept
+
+00:54:26.849 --> 00:54:30.730
+our recognition of the wonderful work that's
+been done.
+
+00:54:30.730 --> 00:54:34.339
+So Ken Harrenstien, will you stand up for
+a minute.
+
+00:54:34.339 --> 00:54:40.119
+[ Applause ]
+&gt;&gt;Vint Cerf: And Naomi.
+
+00:54:40.119 --> 00:54:43.099
+And Toliver Jue, where is Toliver?
+Okay.
+
+00:54:43.099 --> 00:54:45.200
+There.
+Greg Millam?
+
+00:54:45.200 --> 00:54:49.730
+Is Greg here?
+Chris Alberti.
+
+00:54:49.730 --> 00:54:53.770
+Michiel Bacchiani.
+[ Applause ]
+
+00:54:53.770 --> 00:54:59.589
+&gt;&gt;Vint Cerf: And you saw Hiroto Tokusei.
+But he isn't here.
+
+00:54:59.589 --> 00:55:02.540
+He's off in Japan.
+But we thank him for his work, too.
+
+00:55:02.540 --> 00:55:05.530
+And Jonas Klink, finally.
+[ Applause ]
+
+00:55:05.530 --> 00:55:12.530
+&gt;&gt;Vint Cerf: You see these tee shirts.
+And they are indicative of Google's determination
+
+00:55:17.760 --> 00:55:24.760
+to make accessibility a part, a real part,
+of its motto and its objectives in the world.
+
+00:55:24.990 --> 00:55:29.240
+I hope that we're going to see lots of other
+tee shirts with lots of other indications
+
+00:55:29.240 --> 00:55:32.130
+of accessibility progress that we make at
+Google.
+

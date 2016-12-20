@@ -12,7 +12,7 @@
     <script src="https://apis.google.com/js/api.js"></script>
 </head>
 <body ng-app="app" ng-controller="ctrl">
-<div ">
+<div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -28,12 +28,20 @@
                         <div class="col-md-12">
                             <img src="img/loading.gif" ng-show="loading_page">
                             <h1 ng-hide="loading_page" ng-if="massage_error">{{massage_error}}</h1>
-                            <h1 ng-hide="loading_page" ng-if="massage_succes">{{massage_succes}}</h1>
+
                         </div>
 
-                        <div class="col-md-4">
-                            <div my-youtube code="videoToPlay"></div>
+                        <div class="col-md-12" ng-if="massage_succes">
+                            <div class="col-md-4">
+                                <div my-youtube code="videoToPlay"></div>
+                            </div>
+                            <div class="col-md-8" ng-repeat="caption in videoCaptions">
+                                <div class="row">
+                                    <div class="col-md-4"><p>{{caption}}</p></div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
 
@@ -46,12 +54,10 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <!--<div ng-show="show_login">-->
-    <!--<button class="btn btn-default" ng-click="login()">inlogen</button>-->
-    <!--</div>-->
-
-
+<div class="row">
+    <div class="col-md-12">
+        {{videoCaptions}}
+    </div>
 </div>
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -149,30 +155,31 @@
                         .then(function (response) {
 //                            console.log(response.data.items);
                             $scope.video_search_caption = response.data.items;
-                            for (var i = 0; i < response.data.items.length; i++) {
-                                $http.get('/chekforcaptions?code=' + response.data.items[i].id.videoId).then(function (response) {
-//                                    console.log("captions for video id", response);
-                                    $http.get(response.data.uri.href)
-                                            .then(function (response) {
-                                                if (response.data.items) {
-
-                                                    for (var j = 0; j < response.data.items.length; j++) {
-
-                                                        if (response.data.items[j].snippet.language == 'en') {
-                                                            for (var b = 0; b < $scope.video_search_caption.length; b++) {
-                                                                if ($scope.video_search_caption[b].id.videoId == response.data.items[j].snippet.videoId) {
-                                                                    console.log($scope.video_search_caption[b].id.videoId);
-                                                                    $scope.videos.push($scope.video_search_caption[b]);
-                                                                }
-                                                            }
-//                                                        $scope.videos.push($scope.video_search_caption);
-//                                                            console.log('deze heeft engelse ondetitles');
-                                                        }
-                                                    }
-                                                }
-                                            });
-                                });
-                            }
+                            $scope.videos = response.data.items;
+//                            for (var i = 0; i < response.data.items.length; i++) {
+//                                $http.get('/chekforcaptions?code=' + response.data.items[i].id.videoId).then(function (response) {
+////                                    console.log("captions for video id", response);
+//                                    $http.get(response.data.uri.href)
+//                                            .then(function (response) {
+//                                                if (response.data.items) {
+//
+//                                                    for (var j = 0; j < response.data.items.length; j++) {
+//
+//                                                        if (response.data.items[j].snippet.language == 'en') {
+//                                                            for (var b = 0; b < $scope.video_search_caption.length; b++) {
+//                                                                if ($scope.video_search_caption[b].id.videoId == response.data.items[j].snippet.videoId) {
+//                                                                    console.log($scope.video_search_caption[b].id.videoId);
+//                                                                    $scope.videos.push($scope.video_search_caption[b]);
+//                                                                }
+//                                                            }
+////                                                        $scope.videos.push($scope.video_search_caption);
+////                                                            console.log('deze heeft engelse ondetitles');
+//                                                        }
+//                                                    }
+//                                                }
+//                                            });
+//                                });
+//                            }
 //
                         });
 //                $scope.videos = response.data.items;
@@ -180,19 +187,69 @@
         };
 
 
+//        function getfilecontet($path) {
+//
+//            $.get($path, function (data) {
+//                captions = data.split("\n\n").map(function (item) {
+//                    var parts = item.split("\n");
+//                    return {
+//                        time: parts[0].split("-->"),
+//                        text: parts[1] + parts[2],
+//                    };
+//                });
+//                return captions;
+//            });
+//
+//        }
+//        function readTextFile(file)
+//        {
+//            var rawFile = new XMLHttpRequest();
+//           var content= rawFile.open("GET", file, false);
+//            rawFile.onreadystatechange = function ()
+//            {
+//                if(rawFile.readyState === 4)
+//                {
+//                    if(rawFile.status === 200 || rawFile.status == 0)
+//                    {
+//                        var allText = rawFile.responseText;
+//                    }
+//                }
+//            }
+//            rawFile.send(null);
+//        }
+
+
         $scope.loading_page = false;
         $scope.massage_error;
         $scope.massage_succes;
         $scope.videoToPlay;
+        $scope.videoCaptions;
         $scope.get_video_captions = function (id) {
             $scope.loading_page = true;
+            console.log('video kliked', id);
             $http.get('/caption?code=' + id).then(function (response) {
                 $scope.loading_page = false;
                 if (response.data.caption.length) {
                     $scope.videoToPlay = id;
+                    $scope.massage_succes = "captions find->gaa verder met zoeken";
+
+                    $http.get('/read_file?code=' + '/sub/' + response.data.caption).then(function (response) {
+                        $scope.videoCaptions = response.data.data.split("\n\n").map(function (item) {
+                            var parts = item.split("\n");
+                            return {
+                                time: parts[0].split("-->"),
+                                text: parts[1] + parts[2],
+                            };
+                        });
+
+                        console.log('read file response',  $scope.videoCaptions);
+                    });
+//
 
 
-//                    $scope.massage_succes = "captions find->gaa verder met zoeken";
+//                    $scope.videoCaptions = getfilecontet('/sub/' + response.data.caption);
+                    console.log(readTextFile('/sub/' + response.data.caption));
+
                 } else {
                     $scope.massage_error = "Er is geen mogelijkheid om hier te zoeken";
                 }
