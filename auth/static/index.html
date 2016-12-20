@@ -12,13 +12,12 @@
     <script src="https://apis.google.com/js/api.js"></script>
 </head>
 <body ng-app="app" ng-controller="ctrl">
-<div>
+<div class="container-fluid">
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
+        <div class="modal-dialog modal-lg">
             <!-- Modal content-->
-            <div class="modal-content modal-lg">
+            <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Search</h4>
@@ -28,80 +27,60 @@
                         <div class="col-md-12">
                             <img src="img/loading.gif" ng-show="loading_page">
                             <h1 ng-hide="loading_page" ng-if="massage_error">{{massage_error}}</h1>
-
                         </div>
 
                         <div class="col-md-12" ng-if="massage_succes">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div my-youtube code="videoToPlay" time="search_time"></div>
                             </div>
-                            <div class="col-md-4 col-offcet-2" ng-repeat="caption in videoCaptions">
-                                <div class="row">
+                            <div class="col-md-6"><label>search: <input ng-model="searchText"></label> <br></div>
+                            <div class="col-md-6 col-offcet-2"
+                                 ng-repeat="caption in videoCaptions| filter:searchText">
+                                <div class="row" ng-if="$index != 0">
                                     <div class="col-md-4"><p ng-click="video_go_to(video_id,caption.time[0])">
                                         {{caption.time[0]}}</p></div>
                                     <div><p class="col-md-8">{{caption.text}}</p></div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        {{videoCaptions}}
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <form ng-submit="submit(search)">
-            <p><input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control"
-                      ng-model="search"/>
-            </p>
-            <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
-
-        </form>
-
-
-        <div id="results">
-            <h4>video id´s</h4>
-            <div ng-repeat="video in videos">
-                <div class="row" ng-click="get_video_captions(video.id.videoId)" data-toggle="modal"
-                     data-target="#myModal">
-                    <div class="col-md-5">
-                        <img ng-src="{{video.snippet.thumbnails.medium.url}}">
-                    </div>
-                    <div class="col-md-7">
-                        <h3>{{video.snippet.title}}</h3>
-                        <p>{{video.snippet.description}}</p>
-                        <h4>{{video.id.videoId}}</h4>
-                    </div>
-                </div>
-
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form ng-submit="submit(search)">
+                    <p><input type="text" id="search" placeholder="Type something..." autocomplete="off"
+                              class="form-control"
+                              ng-model="search"/>
+                    </p>
+                    <p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+                </form>
             </div>
         </div>
-        <!--<div>-->
-        <!--<h4>Caption id for video</h4>-->
-        <!--<div ng-repeat="captionsId in captionsIds">-->
-        <!--<div class="row">-->
-        <!--<div class="col-md-4"><p>{{captionsId.snippet.videoId}}</p></div>-->
-        <!--&lt;!&ndash;<div class="col-md-4" ng-click="download_caption(captionsId.id)">{{captionsId.id}}</div>&ndash;&gt;-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-
+        <div class="row">
+            <div class="col-md-12">
+                <div ng-repeat="video in videos">
+                    <div class="row" ng-click="get_video_captions(video.id.videoId)" data-toggle="modal"
+                         data-target="#myModal">
+                        <div class="col-md-5">
+                            <img ng-src="{{video.snippet.thumbnails.medium.url}}">
+                        </div>
+                        <div class="col-md-7">
+                            <h3>{{video.snippet.title}}</h3>
+                            <p>{{video.snippet.description}}</p>
+                            <h4>{{video.id.videoId}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!
 </div>
 </body>
 <script>
@@ -126,28 +105,6 @@
     app.controller('ctrl', function ($uibModal, $scope, $http, $window) {
 
         $scope.show_login = false;
-//        $scope.user_token;
-//        var url;
-//        var windowThatWasOpened;
-//        $http.get("url").then(function (response) {
-//            url = response.data;
-//        });
-//        $scope.login = function () {
-//            windowThatWasOpened = $window.open(url, "Please sign in with Google", "width=500px,height:700px");
-//        };
-//        window.onmessage = function (e) {
-//            windowThatWasOpened.close();
-//            var urlWithCode = e.data;
-//            var idx = urlWithCode.lastIndexOf("code=");
-//            var code = urlWithCode.substring(idx + 5).replace("#", "");
-//            $http.get("tokens?code=" + code).then(function (response) {
-//                $scope.show_login = false;
-//                console.log(response.data.access_token);
-//                $scope.user_token =response.data;
-//            });
-//        };
-
-//get searched video
 
         $scope.video_search_caption;
         $scope.videos = [];
@@ -189,46 +146,13 @@
             });
         };
 
-
-//        function getfilecontet($path) {
-//
-//            $.get($path, function (data) {
-//                captions = data.split("\n\n").map(function (item) {
-//                    var parts = item.split("\n");
-//                    return {
-//                        time: parts[0].split("-->"),
-//                        text: parts[1] + parts[2],
-//                    };
-//                });
-//                return captions;
-//            });
-//
-//        }
-//        function readTextFile(file)
-//        {
-//            var rawFile = new XMLHttpRequest();
-//           var content= rawFile.open("GET", file, false);
-//            rawFile.onreadystatechange = function ()
-//            {
-//                if(rawFile.readyState === 4)
-//                {
-//                    if(rawFile.status === 200 || rawFile.status == 0)
-//                    {
-//                        var allText = rawFile.responseText;
-//                    }
-//                }
-//            }
-//            rawFile.send(null);
-//        }
-
-
         $scope.video_go_to = function (id, $time) {
-            var time =$time.substring(0,8);
+            var time = $time.substring(0, 8);
             var a = time.split(':'); // split it at the colons
 
 // minutes are worth 60 seconds. Hours are worth 60 minutes.
             var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
-            $scope.videoToPlay =id + '?start=' + seconds;
+            $scope.videoToPlay = id + '?start=' + seconds;
             console.log(seconds);
 
         }
@@ -240,7 +164,7 @@
         $scope.videoToPlay;
         $scope.videoCaptions;
         $scope.video_id;
-        $scope.search_time = '60';
+        $scope.search_time = '0';
         $scope.get_video_captions = function (id) {
             $scope.loading_page = true;
             console.log('video kliked', id);
@@ -253,47 +177,27 @@
 
                     $http.get('/read_file?code=' + '/sub/' + response.data.caption).then(function (response) {
                         $scope.videoCaptions = response.data.data.split("\n\n").map(function (item) {
+
                             var parts = item.split("\n");
-                            return {
-                                time: parts[0].split("-->"),
-                                text: parts[1] + parts[2],
-                            };
+                            if (parts[0] != undefined && parts[1] != undefined && parts[1] != undefined) {
+                                return {
+                                    time: parts[0].split("-->"),
+                                    text: parts[1] + parts[2],
+                                };
+                            }
+
                         });
 
                         console.log('read file response', $scope.videoCaptions);
                     });
-//
 
-
-//                    $scope.videoCaptions = getfilecontet('/sub/' + response.data.caption);
-//                    console.log(readTextFile('/sub/' + response.data.caption));
 
                 } else {
                     $scope.massage_error = "Er is geen mogelijkheid om hier te zoeken";
                 }
                 console.log("captions for video id", response);
-//                $http.get(response.data.uri.href)
-//                        .then(function (response) {
-//                            console.log(response.data.items);
-//                            $scope.captionsIds = response.data.items;
-//                        });
-
             });
         }
-
-//        $scope.download_caption = function (id) {
-//            $http.get('/download_captions?code=' + id+"&access="+$scope.user_token).then(function (response) {
-//                console.log('send acceess', $scope.user_token);
-//                console.log("downloading caption for caption_id", response.data);
-////                $http.get(response.data.uri.href)
-////                        .then(function (response) {
-////                            console.log(response.data.items);
-////                            $scope.captionsIds = response.data.items;
-////                        });
-//            });
-//        }
-
     });
-
 </script>
 </html>
