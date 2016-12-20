@@ -60,7 +60,7 @@ app.get('/caption', function (req, res) {
 
     var options = {
         // Write automatic subtitle file (youtube only)
-        auto: false,
+        auto: true,
         // Downloads all the available subtitles.
         all: false,
         // Languages of subtitles to download, separated by commas.
@@ -70,11 +70,7 @@ app.get('/caption', function (req, res) {
     };
     youtubedl.getSubs(url, options, function(err, files) {
         if (err) throw err;
-
         console.log('subtitle files downloaded:', files);
-
-        
-
         return res.json({caption: files});
     });
 });
