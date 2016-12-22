@@ -33,14 +33,18 @@
                             <div class="col-md-6">
                                 <div my-youtube code="videoToPlay" time="search_time"></div>
                             </div>
-                            <div class="col-md-6"><label>search: <input ng-model="searchText"></label> <br></div>
-                            <div class="scroll">
-                                <div class="col-md-6"
-                                     ng-repeat="caption in videoCaptions| filter:searchText">
+                            <!--ng-keyup="search_for_mach(text_to_search)"-->
+                            <div class="col-md-6"><label>search: <input class="form-control col-md-12"
+                                                                        ng-model="text_to_search.text"></label> <br>
+                            </div>
+                            <div class="scroll" style="overflow-y: scroll; height:320px; width:400px">
+                                <div class="col-md-12"
+                                     ng-repeat="caption in videoCaptions|filter:text_to_search">
                                     <div class="row" ng-if="$index != 0">
-                                        <div class="col-md-4"><p ng-click="video_go_to(video_id,caption.time[0])">
-                                            {{caption.time[0]}}</p></div>
-                                        <div><p class="col-md-8">{{caption.text}}</p></div>
+                                        <div class="col-md-4"><p ng-click="video_go_to(video_id,caption.time)">
+                                            {{caption.time}}</p></div>
+                                        <div><p ng-click="video_go_to(video_id,caption.time[0])" class="col-md-8">
+                                            {{caption.text}}</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -150,6 +154,11 @@
 //                $scope.videos = response.data.items;
             });
         };
+//        $scope.search_for_mach = function ($text) {
+////            $scope.videoCaptions="";
+//            console.log($scope.videoCaptions.indexOf($text));
+//            console.log($text);
+//        }
 
         $scope.video_go_to = function (id, $time) {
             var time = $time.substring(0, 8);
@@ -159,10 +168,7 @@
             var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
             $scope.videoToPlay = id + '?start=' + seconds;
             console.log(seconds);
-
         }
-
-
         $scope.loading_page = false;
         $scope.massage_error;
         $scope.massage_succes;
@@ -187,24 +193,27 @@
                         $scope.videoCaptions = response.data.data.split("\n\n").map(function (item) {
                             var parts = item.split("\n");
                             if (parts[0] != undefined && parts[1] != undefined && parts[1] != undefined) {
-                                var text = parts[1] + parts[2];
-                                var filter_text = text.replace(/\s*\<.*?\>\s*/g, ' ')
+                                var text = parts[1];
+                                if (parts[2] != undefined) {
+                                    text = text + parts[2];
+                                }
+//                                console.log(parts[1], " ", parts[2]);
+                                var filter_text = text.replace(/\s*\<.*?\>\s*/g, ' ');
+                                var start_time = parts[0].split("-->");
+
                                 return {
-                                    time: parts[0].split("-->"),
-                                    text: filter_text,
+                                    time: start_time[0],
+                                    text: String(filter_text),
                                 };
                             }
-
                         });
 
                         console.log('read file response', $scope.videoCaptions);
                     });
-
-
                 } else {
                     $scope.massage_error = "Er is geen mogelijkheid om hier te zoeken";
                 }
-                console.log("captions for video id", response);
+//                console.log("captions for video id", response);
             });
         }
     });
